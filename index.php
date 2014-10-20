@@ -6,6 +6,9 @@ File to view products
 
 
 */
+
+//TESTING THE GITHUB AND HOW THE FORK PROCEDURES WORK
+
 error_reporting(E_ALL ^ E_NOTICE);
 // Create connection
 $con=mysqli_connect("","root","password","mydb");
