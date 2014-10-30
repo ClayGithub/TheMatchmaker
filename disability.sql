@@ -1,7 +1,7 @@
 -- phpMyAdmin SQL Dump
 -- version 3.4.10.1deb1
 -- http://www.phpmyadmin.net
---
+-- coment ;;;;
 -- Host: localhost
 -- Generation Time: Oct 30, 2014 at 04:15 PM
 -- Server version: 5.5.38
