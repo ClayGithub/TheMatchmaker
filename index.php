@@ -1,3 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<h2 style = 'text-align:center; font-size:50px;'>Matching Technology To People</h2>
+
+<p>
+	<a href='./index.php'>Matchmaker</a></p>
+
+<style>
+table, th, td {
+     border: 1px solid black;
+}
+</style>
+</head>
+<body>
+
+
+<form action='index.php' method='post' align="center">
+<p align="center">
+What would you like to do?<br><br>
+	<select name="question1">
+	<option value="">Please Choose an Answer...</option>
+	<option value="ans1">Entertainment</option>
+	<option value="ans2">Use Assisted Technology</option>
+	<option value="ans3">Communicate</option>
+	<option value="ans4">All of the Above</option>
+	
+	</select>
+	</p><br>
+
+<p align="center">
+What Kind of Device would you like?<br><br>
+	<select name="question2">
+	<option value="">Please Choose an Answer...</option>
+	<option value="type1">Mobile Device: Android</option>
+	<option value="type2">Mobile Device: Apple</option>
+	<option value="type3">Medical Devices</option>
+	<option value="type4">No Preference</option>
+	
+	
+	</select>
+	</p><br>
+	
+	<p align="center">
+Do you have trouble Hearing?<br><br>
+
+	<select name="question3">
+	<option value="">Please Choose...</option>	
+	<option value="hearYes">Yes</option>
+	<option value="hearNo">No</option>
+	</select>
+	</p><br>
+	
+	<p align="center">
+Do you have trouble Seeing?<br><br>
+
+	<select name="question4">
+	<option value="">Please Choose...</option>
+	<option value="seeYes">Yes</option>
+	<option value="seeNo">No</option>
+	</select>
+	</p><br>
+	
+<input type='submit' value='Submit' name='go' />
+</form>	
+
 <?php
 
 session_start();
@@ -12,120 +79,67 @@ File to view products
 
 */
 
+if(isset($_POST['go'])){
 
-error_reporting(E_ALL ^ E_NOTICE);
-// Create connection
-$con=mysqli_connect("","root","password","mydb");
-
-// Check connection
-if (mysqli_connect_errno()) {
-  echo "Failed to connect to MySQL: " . mysqli_connect_error();
-}
-
-
-//Product information
-//Will Be replaced with database information
-
-$products = array(
-	1 => array(
-	'name' => 'Item#1',
-	'price' => 24.99,
-	'category' => 'Category#1',
-	'description' => 'Description 1'
-	),
-	2 => array(
-	'name' => 'Item#2',
-	'price' => 50.00,
-	'category' => 'Category#2',
-	'description' => 'Description 2'
-	),
-	3 => array(
-	'name' => 'Item#3',
-	'price' => 60000.50,
-	'category' => 'Category#3',
-	'description' => 'Description 3'
-	),
-	4 => array(
-	'name' => 'Item#4',
-	'price' => 24.99,
-	'category' => 'Category#4',
-	'description' => 'Description 4'
-	),
-	5 => array(
-	'name' => 'Item#5',
-	'price' => 50.00,
-	'category' => 'Category#5',
-	'description' => 'Description 5'
-	),
-	6 => array(
-	'name' => 'Item#6',
-	'price' => 60000.50,
-	'category' => 'Category#6',
-	'description' => 'Description 6'
-	)
-	
-	
-);
-
-
-
-echo "<h2 style = 'text-align:center; font-size:50px;'>Matchmaker Project Coming Soon!</h2>";
-
-
-if(isset($_GET['view_product'])) {
-	$product_id = $_GET['view_product'];
-	//View Individual product
-	
-	//Displays site links
-	echo "<p>
-	<a href='./index.php'>Matchmaker</a> &gt; <a href='./index.php'>" . 
-	$products[$product_id]['name'] . "</a></p>";
-	
-	
-	//Display products
-	echo "<p>
-		<span style='font-weight:bold;'>" . $products[$product_id]['name'] . "</span><br />
-		<span>$" . $products[$product_id]['price'] . "</span><br />
-		<span>" . $products[$product_id]['category'] . "</span><br />
-		<span>" . $products[$product_id]['description'] . "</span>
-	
-	</p>";
-	
-	
-	
-}
-else{
-	
-//
-	echo "<p>
-	<a href='./index.php'>Matchmaker</a></p>";
-	
-	echo "<h3>Products</h3>";
-	
-	echo "<table style='width:500px;' cellspacing='0'>";
-	echo "<tr style='border-bottom:1px solid #000000;'>
-		<th style='border-bottom:1px solid #000000;'>Name</th>
-		<th style='border-bottom:1px solid #000000;'>Price</th>
-		<th style='border-bottom:1px solid #000000;'>Category</th>
-	</tr>";
-
-	//Loop for displaying products
-
-	foreach($products as $id => $product) {
-		echo "<tr>
-			<td style='border-bottom:1px solid #000000;'><a href='./index.php?view_product=$id'>" . $product['name'] . "</a></td>
-			<td style='border-bottom:1px solid #000000;'>$" . $product['price'] . "</td>
-			<td style='border-bottom:1px solid #000000;'>" . $product['category'] . "</td>
-		</tr>";
-
-		
+	if($_POST['question1'] != "")
+	{
+		$question1 = $_POST['question1'];
+		$_SESSION['question1'] = $question1;
+		header("Location: ./results.php");
 	}
-	echo "</table>";
-		
-}	
+	else{
+		header("Location: ./index.php");
+	}
+
+
+	if($_POST['question2'] != "")
+	{
+		$question2 = $_POST['question2'];
+		$_SESSION['question2'] = $question2;
+	}
+	else{
+		header("Location: ./index.php");
+	}
+	if($_POST['question3'] != "")
+	{
+		$question3 = $_POST['question3'];
+		$_SESSION['question3'] = $question3;
+	}
+	else{
+		header("Location: ./index.php");
+	}
+	if($_POST['question4'] != "")
+	{
+	$question4 = $_POST['question4'];
+	$_SESSION['question4'] = $question4;
+	}
+	else{
+		header("Location: ./index.php");
+	}
+	
+	
+}
+
+
+else{
+
+
+
+}
+
+
+
+
+
 
 
 
 
 
 ?>
+
+
+
+
+</body>
+</html>
