@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 18, 2014 at 01:34 PM
+-- Generation Time: Nov 20, 2014 at 04:37 PM
 -- Server version: 5.5.38
 -- PHP Version: 5.3.10-1ubuntu3.13
 
@@ -36,6 +36,9 @@ CREATE TABLE IF NOT EXISTS `device` (
   `price` double NOT NULL,
   `description` text COLLATE utf8_unicode_ci NOT NULL,
   `peri_device_id` tinyint(3) unsigned NOT NULL,
+  `adriod` tinyint(1) NOT NULL,
+  `apple` tinyint(1) NOT NULL,
+  `special` tinyint(1) NOT NULL,
   PRIMARY KEY (`device_id`),
   KEY `seller_id` (`seller_id`),
   KEY `disability_id` (`disability_id`),
@@ -46,10 +49,10 @@ CREATE TABLE IF NOT EXISTS `device` (
 -- Dumping data for table `device`
 --
 
-INSERT INTO `device` (`device_id`, `device_name`, `disability_id`, `manufacturer`, `seller_id`, `compatibility`, `price`, `description`, `peri_device_id`) VALUES
-(1, 'apple', 1, 'Apple', 1, 1, 700, 'white color, lightweight', 1),
-(2, 'hearing aid', 3, 'New Ear Device', 3, 0, 99, 'light weight and power saving device', 3),
-(3, 'deaf aid', 2, 'New Sign Language', 2, 1, 100, ' new face, light weight and power saving device', 2);
+INSERT INTO `device` (`device_id`, `device_name`, `disability_id`, `manufacturer`, `seller_id`, `compatibility`, `price`, `description`, `peri_device_id`, `adriod`, `apple`, `special`) VALUES
+(1, 'apple', 1, 'Apple', 1, 1, 700, 'white color, lightweight', 1, 0, 0, 0),
+(2, 'hearing aid', 3, 'New Ear Device', 3, 0, 99, 'light weight and power saving device', 3, 0, 0, 0),
+(3, 'deaf aid', 2, 'New Sign Language', 2, 1, 100, ' new face, light weight and power saving device', 2, 0, 0, 0);
 
 --
 -- Constraints for dumped tables
@@ -59,9 +62,9 @@ INSERT INTO `device` (`device_id`, `device_name`, `disability_id`, `manufacturer
 -- Constraints for table `device`
 --
 ALTER TABLE `device`
-  ADD CONSTRAINT `device_ibfk_3` FOREIGN KEY (`peri_device_id`) REFERENCES `peripheral_device` (`peri_device_id`) ON UPDATE CASCADE,
   ADD CONSTRAINT `device_ibfk_1` FOREIGN KEY (`seller_id`) REFERENCES `seller` (`seller_id`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `device_ibfk_2` FOREIGN KEY (`disability_id`) REFERENCES `disability` (`disability_id`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `device_ibfk_2` FOREIGN KEY (`disability_id`) REFERENCES `disability` (`disability_id`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `device_ibfk_3` FOREIGN KEY (`peri_device_id`) REFERENCES `peripheral_device` (`peri_device_id`) ON UPDATE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
