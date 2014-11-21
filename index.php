@@ -42,7 +42,7 @@ What Kind of Device would you like?<br><br>
 	<option value="">Please Choose an Answer...</option>
 	<option value="type1">Mobile Device: Android</option>
 	<option value="type2">Mobile Device: Apple</option>
-	<option value="type3">Medical Devices</option>
+	<option value="type3">Specialized Devices</option>
 	<option value="type4">No Preference</option>
 	
 	
