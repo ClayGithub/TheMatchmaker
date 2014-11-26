@@ -133,9 +133,10 @@ What would you like to do?<br><br>
 	<select name="question1">
 	<option value="">Please Choose an Answer...</option>
 	<option value="ans1">Entertainment</option>
-	<option value="ans2">Communicate/Scheduling</option>
-	<option value="ans3">Everyday Tasks</option>
-	<option value="ans4">All of the Above</option>
+	<option value="ans2">Communicate</option>
+	<option value="ans3">Scheduling</option>
+	<option value="ans4">Everyday Tasks</option>
+	<option value="ans5">All of the Above</option>
 	
 	</select>
 	</p><br>
@@ -146,7 +147,7 @@ What Kind of Device would you like?<br><br>
 	<option value="">Please Choose an Answer...</option>
 	<option value="type1">Mobile Device: Android</option>
 	<option value="type2">Mobile Device: Apple</option>
-	<option value="type3">Medical Devices</option>
+	<option value="type3">Specialized Devices</option>
 	<option value="type4">No Preference</option>
 	
 	

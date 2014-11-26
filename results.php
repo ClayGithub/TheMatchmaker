@@ -129,43 +129,130 @@ function individualProduct($idNumber) {
 $question1A = $_SESSION['question1'];
 $question2A = $_SESSION['question2'];
 
-
-
-if(isset($_GET['view_id'])) {
-	$product_id = $_GET['view_id'];
-	echo $product_id;
+if(isset($_GET['compatID'])) {
 	
-	$sql = "SELECT * FROM device WHERE device_id = " . $product_id;
+	$compatID = $_GET['compatID'];
+	//echo $compatID;
+	
+	if($question1A == "ans1")
+	{
+		$sql = "SELECT * FROM peripheral_device WHERE entertainment = 1 AND compatibility = " . $compatID;
+			
+				
+		$result = $conn-> query($sql);
+	}
+	else if($question1A == "ans2")
+	{
+		$sql = "SELECT * FROM peripheral_device WHERE communication = 1 AND compatibility = " . $compatID;
+			
+				
+		$result = $conn-> query($sql);
+	}
+	else if($question1A == "ans3")
+	{
+		$sql = "SELECT * FROM peripheral_device WHERE scheduling = 1 AND compatibility = " . $compatID;
+			
+				
+		$result = $conn-> query($sql);
+	}
+	else if($question1A == "ans4")
+	{
+		$sql = "SELECT * FROM peripheral_device WHERE everyday_tasks = 1 AND compatibility = " . $compatID;
+			
+				
+		$result = $conn-> query($sql);
+	}
+	else if($question1A == "ans5")
+	{
+		$sql = "SELECT * FROM peripheral_device WHERE entertainment = 1 AND communication = 1 AND scheduling = 1 AND everyday_tasks = 1 AND compatibility = " . $compatID;
+			
+				
+		$result = $conn-> query($sql);
+	}
+	
+			if ($result->num_rows > 0) {
+					echo "<table align='center';><tr><th>Device Name</th><th>Price</th><th>Website</th></tr>";
+			// output data of each row
+					while($row = $result ->fetch_assoc()) {
+					
+						
+						
+						
+						
+						echo "<tr><td>". $row["peri_device_name"]. "</td><td>".$row["price"]."</td><td>".$row["website"]."</td></tr>";
+						
+					}
+					echo "</table>";
+					
+					
+					
+					
+				} 
+				else {
+				echo "<p align='center';>
+					 We're Sorry, We Couldn't Find Any Attachments For This Device That Met Your Needs!
+					 
+				     </p></ br>";
+				echo "<p align='center';>
+					Please Go Back And Try Another Device
+				</p>";
+				}
+				
+			
+				
+				
+			$conn->close();
+
+}
+else if(isset($_GET['view_id'])) {
+
+	
+	
+		$product_id = $_GET['view_id'];
+		//echo $product_id;
 		
-			
-	$result = $conn-> query($sql);
-	
-	if ($result->num_rows > 0) {
-			echo "<table align='center';><tr><th>Device Name</th><th>Description</th><th>Manufacturer</th></tr>";
-    // output data of each row
-			while($row = $result ->fetch_assoc()) {
+		
+		$sql = "SELECT * FROM device WHERE device_id = " . $product_id;
 			
 				
+		$result = $conn-> query($sql);
+		
+		
+		
+		if ($result->num_rows > 0) {
+				echo "<table align='center';><tr><th>Device Name</th><th>Description</th><th>Manufacturer</th></tr>";
+		// output data of each row
+				while($row = $result ->fetch_assoc()) {
+				
+					$compatID = $row["compatibility"];
+					
+					
+					
+					echo "<tr><td><a href='./results.php?compatID=$compatID'>". $row["device_name"]. "</a></td><td>".$row["description"]."</td><td>".$row["manufacturer"]."</td></tr>";
+					
+				}
+				echo "</table>";
 				
 				
 				
-				echo "<tr><td>". $row["device_name"]. "</td><td>".$row["description"]."</td><td>".$row["manufacturer"]."</td></tr>";
+				
+			} 
+			else {
+				echo "0 results";
 			}
-			echo "</table>";
-		} 
-		else {
-			echo "0 results";
-		}
+			
 		
-		
-		
-	$conn->close();
+			
+			
+		$conn->close();
 
+	
+	
 	
 }
 else{
 
-
+/*
 	if($question1A == "ans1")
 	{
 		echo "<p>
@@ -185,6 +272,12 @@ else{
 		</p></ br>";
 	}
 	else if($question1A == "ans4")
+	{
+		echo "<p>
+		$question1A
+		</p></ br>";
+	}
+	else if($question1A == "ans5")
 	{
 		echo "<p>
 		$question1A
@@ -216,104 +309,39 @@ else{
 		</p></ br>";
 	}
 
-
+*/
 
 	if($question1A == "ans1")
 	{
 		if($question2A == "type1")
 		{
-			$sql = "SELECT * FROM device";
+			$sql = "SELECT * FROM device WHERE entertainment = 1 AND android = 1";
 			
 				
 			$result = $conn-> query($sql);
-			
-			
-			if ($result->num_rows > 0) {
-				echo "<table align='center';><tr><th>Device Name</th><th>Description</th><th>Manufacturer</th></tr>";
-		// output data of each row
-				while($row = $result ->fetch_assoc()) {
-					$id = $row["device_id"];
-					
-					
-					
-					
-					echo "<tr><td><a href='./results.php?view_id=$id'>". $row["device_name"]. "</a></td><td>".$row["description"]."</td><td>".$row["manufacturer"]."</td></tr>";
-				}
-				echo "</table>";
-			} 
-			else {
-				echo "0 results";
-			}
-		
-		
-		
-			$conn->close();
 		}
 		else if($question2A == "type2")
 		{
-			$sql = "SELECT * FROM device";
+			$sql = "SELECT * FROM device WHERE entertainment = 1 AND apple = 1";
 			
 				
 			$result = $conn-> query($sql);
-			
-			
-			if ($result->num_rows > 0) {
-				echo "<table align='center';><tr><th>Device Name</th><th>Description</th><th>Manufacturer</th></tr>";
-		// output data of each row
-				while($row = $result ->fetch_assoc()) {
-					$id = $row["device_id"];
-					
-					
-					
-					
-					echo "<tr><td><a href='./results.php?view_id=$id'>". $row["device_name"]. "</a></td><td>".$row["description"]."</td><td>".$row["manufacturer"]."</td></tr>";
-				}
-				echo "</table>";
-			} 
-			else {
-				echo "0 results";
-			}
-		
-		
-		
-			$conn->close();
 		}
 		else if($question2A == "type3")
 		{
-			$sql = "SELECT * FROM device";
+			$sql = "SELECT * FROM device WHERE entertainment = 1 AND specialized = 1";
 			
 				
 			$result = $conn-> query($sql);
-			
-			
-			if ($result->num_rows > 0) {
-				echo "<table align='center';><tr><th>Device Name</th><th>Description</th><th>Manufacturer</th></tr>";
-		// output data of each row
-				while($row = $result ->fetch_assoc()) {
-					$id = $row["device_id"];
-					
-					
-					
-					
-					echo "<tr><td><a href='./results.php?view_id=$id'>". $row["device_name"]. "</a></td><td>".$row["description"]."</td><td>".$row["manufacturer"]."</td></tr>";
-				}
-				echo "</table>";
-			} 
-			else {
-				echo "0 results";
-			}
-		
-		
-		
-			$conn->close();
 		}
 		else if($question2A == "type4")
 		{
-			$sql = "SELECT * FROM device";
+			$sql = "SELECT * FROM device WHERE entertainment = 1";
 			
 				
 			$result = $conn-> query($sql);
 			
+		}
 			
 			if ($result->num_rows > 0) {
 				echo "<table align='center';><tr><th>Device Name</th><th>Description</th><th>Manufacturer</th></tr>";
@@ -335,106 +363,40 @@ else{
 		
 		
 			$conn->close();
-		}
+		
 		
 	}
 	else if($question1A == "ans2")
 	{
 		if($question2A == "type1")
 		{
-			$sql = "SELECT * FROM device";
+			$sql = "SELECT * FROM device WHERE communication = 1 AND android = 1";
 			
 				
 			$result = $conn-> query($sql);
-			
-			
-			if ($result->num_rows > 0) {
-				echo "<table align='center';><tr><th>Device Name</th><th>Description</th><th>Manufacturer</th></tr>";
-		// output data of each row
-				while($row = $result ->fetch_assoc()) {
-					$id = $row["device_id"];
-					
-					
-					
-					
-					echo "<tr><td><a href='./results.php?view_id=$id'>". $row["device_name"]. "</a></td><td>".$row["description"]."</td><td>".$row["manufacturer"]."</td></tr>";
-				}
-				echo "</table>";
-			} 
-			else {
-				echo "0 results";
-			}
-		
-		
-		
-			$conn->close();
-		}
+		}	
 		else if($question2A == "type2")
 		{
-			$sql = "SELECT * FROM device";
+			$sql = "SELECT * FROM device WHERE communication = 1 AND apple = 1";
 			
 				
 			$result = $conn-> query($sql);
-			
-			
-			if ($result->num_rows > 0) {
-				echo "<table align='center';><tr><th>Device Name</th><th>Description</th><th>Manufacturer</th></tr>";
-		// output data of each row
-				while($row = $result ->fetch_assoc()) {
-					$id = $row["device_id"];
-					
-					
-					
-					
-					echo "<tr><td><a href='./results.php?view_id=$id'>". $row["device_name"]. "</a></td><td>".$row["description"]."</td><td>".$row["manufacturer"]."</td></tr>";
-				}
-				echo "</table>";
-			} 
-			else {
-				echo "0 results";
-			}
-		
-		
-		
-			$conn->close();
 		}
 		else if($question2A == "type3")
 		{
-			$sql = "SELECT * FROM device";
+			$sql = "SELECT * FROM device WHERE communication = 1 AND specialized = 1";
 			
 				
 			$result = $conn-> query($sql);
-			
-			
-			if ($result->num_rows > 0) {
-				echo "<table align='center';><tr><th>Device Name</th><th>Description</th><th>Manufacturer</th></tr>";
-		// output data of each row
-				while($row = $result ->fetch_assoc()) {
-					$id = $row["device_id"];
-					
-					
-					
-					
-					echo "<tr><td><a href='./results.php?view_id=$id'>". $row["device_name"]. "</a></td><td>".$row["description"]."</td><td>".$row["manufacturer"]."</td></tr>";
-				}
-				echo "</table>";
-			} 
-			else {
-				echo "0 results";
-			}
-		
-		
-		
-			$conn->close();
 		}
 		else if($question2A == "type4")
 		{
-			$sql = "SELECT * FROM device";
+			$sql = "SELECT * FROM device WHERE communication = 1";
 			
 				
 			$result = $conn-> query($sql);
 			
-			
+		}	
 			if ($result->num_rows > 0) {
 				echo "<table align='center';><tr><th>Device Name</th><th>Description</th><th>Manufacturer</th></tr>";
 		// output data of each row
@@ -455,105 +417,40 @@ else{
 		
 		
 			$conn->close();
-		}
 		
 	}
+		
 	else if($question1A == "ans3")
 	{
 		if($question2A == "type1")
 		{
-			$sql = "SELECT * FROM device";
+			$sql = "SELECT * FROM device WHERE scheduling = 1 AND android = 1";
 			
 				
 			$result = $conn-> query($sql);
-			
-			
-			if ($result->num_rows > 0) {
-				echo "<table align='center';><tr><th>Device Name</th><th>Description</th><th>Manufacturer</th></tr>";
-		// output data of each row
-				while($row = $result ->fetch_assoc()) {
-					$id = $row["device_id"];
-					
-					
-					
-					
-					echo "<tr><td><a href='./results.php?view_id=$id'>". $row["device_name"]. "</a></td><td>".$row["description"]."</td><td>".$row["manufacturer"]."</td></tr>";
-				}
-				echo "</table>";
-			} 
-			else {
-				echo "0 results";
-			}
-		
-		
-		
-			$conn->close();
 		}
 		else if($question2A == "type2")
 		{
-			$sql = "SELECT * FROM device";
+			$sql = "SELECT * FROM device WHERE scheduling = 1 AND apple = 1";
 			
 				
 			$result = $conn-> query($sql);
-			
-			
-			if ($result->num_rows > 0) {
-				echo "<table align='center';><tr><th>Device Name</th><th>Description</th><th>Manufacturer</th></tr>";
-		// output data of each row
-				while($row = $result ->fetch_assoc()) {
-					$id = $row["device_id"];
-					
-					
-					
-					
-					echo "<tr><td><a href='./results.php?view_id=$id'>". $row["device_name"]. "</a></td><td>".$row["description"]."</td><td>".$row["manufacturer"]."</td></tr>";
-				}
-				echo "</table>";
-			} 
-			else {
-				echo "0 results";
-			}
-		
-		
-		
-			$conn->close();
 		}
 		else if($question2A == "type3")
 		{
-			$sql = "SELECT * FROM device";
+			$sql = "SELECT * FROM device WHERE scheduling = 1 AND specialized = 1";
 			
 				
 			$result = $conn-> query($sql);
-			
-			
-			if ($result->num_rows > 0) {
-				echo "<table align='center';><tr><th>Device Name</th><th>Description</th><th>Manufacturer</th></tr>";
-		// output data of each row
-				while($row = $result ->fetch_assoc()) {
-					$id = $row["device_id"];
-					
-					
-					
-					
-					echo "<tr><td><a href='./results.php?view_id=$id'>". $row["device_name"]. "</a></td><td>".$row["description"]."</td><td>".$row["manufacturer"]."</td></tr>";
-				}
-				echo "</table>";
-			} 
-			else {
-				echo "0 results";
-			}
-		
-		
-		
-			$conn->close();
 		}
 		else if($question2A == "type4")
 		{
-			$sql = "SELECT * FROM device";
+			$sql = "SELECT * FROM device WHERE scheduling = 1";
 			
 				
 			$result = $conn-> query($sql);
 			
+		}	
 			
 			if ($result->num_rows > 0) {
 				echo "<table align='center';><tr><th>Device Name</th><th>Description</th><th>Manufacturer</th></tr>";
@@ -575,105 +472,40 @@ else{
 		
 		
 			$conn->close();
-		}
+		
 		
 	}
 	else if($question1A == "ans4")
 	{
 		if($question2A == "type1")
 		{
-			$sql = "SELECT * FROM device";
+			$sql = "SELECT * FROM device WHERE everyday_tasks = 1 AND android = 1";
 			
 				
 			$result = $conn-> query($sql);
-			
-			
-			if ($result->num_rows > 0) {
-				echo "<table align='center';><tr><th>Device Name</th><th>Description</th><th>Manufacturer</th></tr>";
-		// output data of each row
-				while($row = $result ->fetch_assoc()) {
-					$id = $row["device_id"];
-					
-					
-					
-					
-					echo "<tr><td><a href='./results.php?view_id=$id'>". $row["device_name"]. "</a></td><td>".$row["description"]."</td><td>".$row["manufacturer"]."</td></tr>";
-				}
-				echo "</table>";
-			} 
-			else {
-				echo "0 results";
-			}
-		
-		
-		
-			$conn->close();
 		}
 		else if($question2A == "type2")
 		{
-			$sql = "SELECT * FROM device";
+			$sql = "SELECT * FROM device WHERE everyday_tasks = 1 AND apple = 1";
 			
 				
 			$result = $conn-> query($sql);
-			
-			
-			if ($result->num_rows > 0) {
-				echo "<table align='center';><tr><th>Device Name</th><th>Description</th><th>Manufacturer</th></tr>";
-		// output data of each row
-				while($row = $result ->fetch_assoc()) {
-					$id = $row["device_id"];
-					
-					
-					
-					
-					echo "<tr><td><a href='./results.php?view_id=$id'>". $row["device_name"]. "</a></td><td>".$row["description"]."</td><td>".$row["manufacturer"]."</td></tr>";
-				}
-				echo "</table>";
-			} 
-			else {
-				echo "0 results";
-			}
-		
-		
-		
-			$conn->close();
 		}
 		else if($question2A == "type3")
 		{
-			$sql = "SELECT * FROM device";
+			$sql = "SELECT * FROM device WHERE everyday_tasks = 1 AND specialized = 1";
 			
 				
 			$result = $conn-> query($sql);
-			
-			
-			if ($result->num_rows > 0) {
-				echo "<table align='center';><tr><th>Device Name</th><th>Description</th><th>Manufacturer</th></tr>";
-		// output data of each row
-				while($row = $result ->fetch_assoc()) {
-					$id = $row["device_id"];
-					
-					
-					
-					
-					echo "<tr><td><a href='./results.php?view_id=$id'>". $row["device_name"]. "</a></td><td>".$row["description"]."</td><td>".$row["manufacturer"]."</td></tr>";
-				}
-				echo "</table>";
-			} 
-			else {
-				echo "0 results";
-			}
-		
-		
-		
-			$conn->close();
 		}
 		else if($question2A == "type4")
 		{
-			$sql = "SELECT * FROM device";
+			$sql = "SELECT * FROM device WHERE everyday_tasks = 1";
 			
 				
 			$result = $conn-> query($sql);
 			
+		}		
 			
 			if ($result->num_rows > 0) {
 				echo "<table align='center';><tr><th>Device Name</th><th>Description</th><th>Manufacturer</th></tr>";
@@ -695,10 +527,65 @@ else{
 		
 		
 			$conn->close();
-		}
+		
 		
 	}
-	
+	else if($question1A == "ans5")
+	{
+		if($question2A == "type1")
+		{
+			$sql = "SELECT * FROM device WHERE entertainment = 1 AND communication = 1 AND everyday_tasks = 1 AND scheduling = 1 AND android = 1";
+			
+				
+			$result = $conn-> query($sql);
+		}
+		else if($question2A == "type2")
+		{
+			$sql = "SELECT * FROM device WHERE entertainment = 1 AND communication = 1 AND everyday_tasks = 1 AND scheduling = 1 AND apple = 1";
+			
+				
+			$result = $conn-> query($sql);
+		}
+		else if($question2A == "type3")
+		{
+			$sql = "SELECT * FROM device WHERE entertainment = 1 AND communication = 1 AND everyday_tasks = 1 AND scheduling = 1 AND specialized = 1";
+			
+				
+			$result = $conn-> query($sql);
+		}
+		else if($question2A == "type4")
+		{
+			$sql = "SELECT * FROM device WHERE entertainment = 1 AND communication = 1 AND everyday_tasks = 1 AND scheduling = 1";
+			
+				
+			$result = $conn-> query($sql);
+			
+		}		
+			
+			if ($result->num_rows > 0) {
+				echo "<table align='center';><tr><th>Device Name</th><th>Description</th><th>Manufacturer</th></tr>";
+		// output data of each row
+				while($row = $result ->fetch_assoc()) {
+					$id = $row["device_id"];
+					
+					
+					
+					
+					echo "<tr><td><a href='./results.php?view_id=$id'>". $row["device_name"]. "</a></td><td>".$row["description"]."</td><td>".$row["manufacturer"]."</td></tr>";
+				}
+				echo "</table>";
+			} 
+			else {
+				echo "0 results";
+			}
+		
+		
+		
+			$conn->close();
+		
+
+		
+	}
 
 }
 ?>
