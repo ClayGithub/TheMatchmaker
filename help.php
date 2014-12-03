@@ -62,7 +62,9 @@ function MM_nbGroup(event, grpName) { //v6.0
 
 <style>
 table, th, td {
-     border: 1px solid black;
+     border: 5px solid #045973;
+	 
+	 font-size: 20px
 }
 .STYLE1 {font-family: "Times New Roman", Times, serif}
 body,td,th {
@@ -80,7 +82,7 @@ body {
 <h2 class="STYLE1" style = 'text-align:center; font-size:50px;'>Matching Technology To People<br>
   <br>
 </h2>
-<table border="0" align="center" cellpadding="0" cellspacing="0" bordercolor="#FFFFFF">
+<table border="2" align="center" cellpadding="5" cellspacing="5" bordercolor="#FFFFFF">
   <tr>
     <td><a href="index.php" target="_top" onClick="MM_nbGroup('down','group1','Matchmaker','',1)" onMouseOver="MM_nbGroup('over','Matchmaker','./images/matchmaker1.jpg','',1)" onMouseOut="MM_nbGroup('out')"><img src="./images/matchmaker0.jpg" alt="" name="Matchmaker" width="296" height="60" border="0" onload=""></a></td>
     <td><a href="results.php" target="_top" onClick="MM_nbGroup('down','group1','Results','',1)" onMouseOver="MM_nbGroup('over','Results','./images/results1.jpg','',1)" onMouseOut="MM_nbGroup('out')"><img src="./images/results0.jpg" alt="" name="Results" width="156" height="60" border="0" onload=""></a></td>

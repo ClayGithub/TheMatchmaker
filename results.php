@@ -72,7 +72,9 @@ body {
 
 <style>
 table, th, td {
-     border: 1px solid black;
+     border: 5px solid #045973;
+	 
+	 font-size: 20px
 }
 .STYLE1 {font-family: "Times New Roman", Times, serif}
 </style>
@@ -84,7 +86,7 @@ table, th, td {
   <br>
 </h2>
 
-<table border="0" cellpadding="0" cellspacing="0">
+<table border="2" cellpadding="5" cellspacing="5">
   <tr>
     <td><a href="index.php" target="_top" onClick="MM_nbGroup('down','group1','Matchmaker','',1)" onMouseOver="MM_nbGroup('over','Matchmaker','images/matchmaker1.jpg','',1)" onMouseOut="MM_nbGroup('out')"><img src="images/matchmaker0.jpg" alt="" name="Matchmaker" width="296" height="60" border="0" onload=""></a></td>
     <td><a href="results.php" target="_top" onClick="MM_nbGroup('down','group1','Results','',1)" onMouseOver="MM_nbGroup('over','Results','images/results1.jpg','',1)" onMouseOut="MM_nbGroup('out')"><img src="images/results0.jpg" alt="" name="Results" width="156" height="60" border="0" onload=""></a></td>
@@ -171,7 +173,7 @@ if(isset($_GET['compatID'])) {
 	}
 	
 			if ($result->num_rows > 0) {
-					echo "<table align='center';><tr><th>Device Name</th><th>Price</th><th>Website</th></tr>";
+					echo "<table align='center';><tr><th>Device Name</th><th>Description</th><th>Website</th></tr>";
 			// output data of each row
 					while($row = $result ->fetch_assoc()) {
 					
@@ -179,7 +181,7 @@ if(isset($_GET['compatID'])) {
 						
 						
 						
-						echo "<tr><td>". $row["peri_device_name"]. "</td><td>".$row["price"]."</td><td>".$row["website"]."</td></tr>";
+						echo "<tr><td 'width=50px;'>". $row["peri_device_name"]. "</td><td>".$row["description"]."</td><td>".$row["website"]."</td></tr>";
 						
 					}
 					echo "</table>";
