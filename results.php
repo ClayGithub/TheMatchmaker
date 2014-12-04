@@ -82,6 +82,7 @@ table, th, td {
 <body onLoad="MM_preloadImages('../images/matchmaker1.jpg','../images/results1.jpg','../images/about1.jpg','../images/help1.jpg')">
 
 <div align="center">
+<img src="images/DDRC_logo.jpg" alt="logo" />
 <h2 class="STYLE1" style = 'text-align:center; font-size:50px;'>Matching Technology To People<br>
   <br>
 </h2>

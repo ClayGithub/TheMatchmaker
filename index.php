@@ -55,6 +55,10 @@ a:active {
 }
 .STYLE9 {font-size: 12px}
 .STYLE11 {font-size: 18px; color: #FF6600; }
+.STYLE12{background-image:url(images/button_submit.jpg);width:399px ;height:122px}
+a:link {
+	text-decoration: none;
+}
 </style>
 <script type="text/JavaScript">
 <!--
@@ -110,6 +114,7 @@ function MM_nbGroup(event, grpName) { //v6.0
 </head>
 <body onload="MM_preloadImages('images/matchmaker1.jpg','images/results1.jpg','images/about1.jpg','images/help1.jpg')">
 <div align="center">
+<img src="images/DDRC_logo.jpg" alt="logo" />
   <h2 style = 'text-align:center; font-size:50px;'>Matching Technology To People</h2>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
@@ -139,7 +144,7 @@ What would you like to do?<br><br>
 	<option value="ans5">All of the Above</option>
 	
 	</select>
-	</p><br>
+  </p><br>
 
 <p align="center" class="STYLE6">
 What Kind of Device would you like?<br><br>
@@ -152,12 +157,12 @@ What Kind of Device would you like?<br><br>
 	
 	
 	</select>
-	</p><br>
+  </p><br>
 
 
 
 
-  <input type='submit' value='Submit' name='go' /> 
+  <input type='submit' value='' class="STYLE12" name='go' /> 
 
 
 </form>	
