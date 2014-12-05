@@ -69,12 +69,32 @@ table, th, td {
 .STYLE1 {font-family: "Times New Roman", Times, serif}
 body,td,th {
 	color: #000000;
+	font-family: Times New Roman, Times, serif;
 }
 body {
 	margin-left: 250px;
 	margin-right: 250px;
 	margin-bottom: 50px;
+	margin-top: 0px;
 }
+.STYLE2 {
+	font-size: 12px;
+	font-family: "Times New Roman", Times, serif;
+}
+.STYLE3 {font-size: 18px}
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+a:active {
+	text-decoration: none;
+}
+.STYLE4 {font-size: 24px}
 </style>
 </head>
 <body onLoad="MM_preloadImages('../images/matchmaker1.jpg','../images/results1.jpg','../images/about1.jpg','../images/help1.jpg')">
@@ -93,15 +113,6 @@ body {
 </table>
 <p>&nbsp;</p>
 
-<p class="STYLE1" style = 'text-align:center; font-size:20px;'>We would like to help you to find a device that suits your needs. <br><br>
-The way to use the site is to click on the Matchmaker link above and then answer the questions.<br><br>
-Once you have answered the questions, just click submit!<br><br>
-After looking at your results, you can click to see the individual item, and after that you can click on the device again in order to see peripheral devices that will help accomplish your goal.<br><br>
-  <br>
-</p>
-
-
-<hr align="center" width="700" size="2">
 <p>&nbsp;</p>
 </div>
 
@@ -109,7 +120,8 @@ After looking at your results, you can click to see the individual item, and aft
 
 
 
-<?php
+<p>
+  <?php
 
 
 
@@ -130,9 +142,22 @@ File to view products
 
 
 ?>
-
-
-
+</p>
+<p class="STYLE4">We would like to help you to find a device that suits your needs.<br>
+  <br>
+The way to use the site is to click on the Matchmaker link above and then answer the questions.<br>
+<br>
+  Once you have answered the questions, just click submit!<br>
+  <br>
+After looking at your results, you can click to see the individual item, and after that you can click on the device again in order to see peripheral devices that will help accomplish your goal.</p>
+<p class="STYLE4">&nbsp;</p>
+<hr align="center" width="700" size="2">
+<p><br />
+</p>
+<div id="stcpDiv">
+<p align="center" class="STYLE9 STYLE2">copyright&copy; 2014 Developmental Disabilities Resource Center</p>
+<p align="center"><span class="STYLE11 STYLE3"><a href="http://http://www.ddrcco.com/">contact us</a></span></p>
+</div>
 
 </body>
 </html>

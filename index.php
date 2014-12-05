@@ -174,9 +174,9 @@ What Kind of Device would you like?<br><br>
 <br />
 <hr align="center" width="700" size="2" />
 <p><br />
-</p>
-<p align="center" class="STYLE9">copyright&copy; XXXXXXXXXXXXXXX</p>
-<p align="center"><span class="STYLE11"><a href="#">contact us</a></span></p>
+</p><div id="stcpDiv">
+<p align="center" class="STYLE9">copyright&copy; 2014 Developmental Disabilities Resource Center</p>
+<p align="center"><span class="STYLE11"><a href="http://http://www.ddrcco.com/">contact us</a></span></p></div>
 <p>
 <?php
 

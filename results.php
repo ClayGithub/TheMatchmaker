@@ -60,11 +60,13 @@ function MM_nbGroup(event, grpName) { //v6.0
 <!--
 body,td,th {
 	color: #000000;
+	font-family: Times New Roman, Times, serif;
 }
 body {
 	margin-left: 250px;
 	margin-right: 250px;
 	margin-bottom: 50px;
+	margin-top: 0px;
 }
 -->
 </style>
@@ -72,11 +74,47 @@ body {
 
 <style>
 table, th, td {
-     border: 5px solid #045973;
+     border:0;
 	 
-	 font-size: 20px
+	 font-size: 20px;
+	 background-color:#CEECF2;
+	 width:800px;
+	 text-align:center;
+	 cellspacing:20px;
+	 padding:20px;
+	 
 }
 .STYLE1 {font-family: "Times New Roman", Times, serif}
+.STYLE2 {
+	font-size: 12px;
+	font-family: "Times New Roman", Times, serif;
+}
+.STYLE3 {
+	font-size: 18px;
+	font-family: "Times New Roman", Times, serif;
+}
+.STYLE4{
+border: 5px solid #045973;
+background-color:#FFFFFF;
+ border:2;
+  cellpadding:5;
+   cellspacing:5;
+   height:60px;
+   padding:0px;
+   padding-bottom:3px;
+}
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+a:active {
+	text-decoration: none;
+}
 </style>
 </head>
 <body onLoad="MM_preloadImages('../images/matchmaker1.jpg','../images/results1.jpg','../images/about1.jpg','../images/help1.jpg')">
@@ -87,15 +125,16 @@ table, th, td {
   <br>
 </h2>
 
-<table border="2" cellpadding="5" cellspacing="5">
+<table  width="764"; class="STYLE4" border="2" cellpadding="5" cellspacing="5">
   <tr>
-    <td><a href="index.php" target="_top" onClick="MM_nbGroup('down','group1','Matchmaker','',1)" onMouseOver="MM_nbGroup('over','Matchmaker','images/matchmaker1.jpg','',1)" onMouseOut="MM_nbGroup('out')"><img src="images/matchmaker0.jpg" alt="" name="Matchmaker" width="296" height="60" border="0" onload=""></a></td>
-    <td><a href="results.php" target="_top" onClick="MM_nbGroup('down','group1','Results','',1)" onMouseOver="MM_nbGroup('over','Results','images/results1.jpg','',1)" onMouseOut="MM_nbGroup('out')"><img src="images/results0.jpg" alt="" name="Results" width="156" height="60" border="0" onload=""></a></td>
-    <td><a href="about.php" target="_top" onClick="MM_nbGroup('down','group1','About','',1)" onMouseOver="MM_nbGroup('over','About','images/about1.jpg','',1)" onMouseOut="MM_nbGroup('out')"><img src="images/about0.jpg" alt="" name="About" width="156" height="60" border="0" onload=""></a></td>
-    <td><a href="help.php" target="_top" onClick="MM_nbGroup('down','group1','Help','',1)" onMouseOver="MM_nbGroup('over','Help','images/help1.jpg','',1)" onMouseOut="MM_nbGroup('out')"><img src="images/help0.jpg" alt="" name="Help" width="156" height="60" border="0" onload=""></a></td>
+    <td class="STYLE4" width="296px" ><a href="index.php" target="_top" onClick="MM_nbGroup('down','group1','Matchmaker','',1)" onMouseOver="MM_nbGroup('over','Matchmaker','images/matchmaker1.jpg','',1)" onMouseOut="MM_nbGroup('out')"><img src="images/matchmaker0.jpg" alt="" name="Matchmaker" width="296" height="60" border="0" onload=""></a></td>
+    <td class="STYLE4" width="156px" ><a href="results.php" target="_top" onClick="MM_nbGroup('down','group1','Results','',1)" onMouseOver="MM_nbGroup('over','Results','images/results1.jpg','',1)" onMouseOut="MM_nbGroup('out')"><img src="images/results0.jpg" alt="" name="Results" width="156" height="60" border="0" onload=""></a></td>
+    <td class="STYLE4" width="156px" ><a href="about.php" target="_top" onClick="MM_nbGroup('down','group1','About','',1)" onMouseOver="MM_nbGroup('over','About','images/about1.jpg','',1)" onMouseOut="MM_nbGroup('out')"><img src="images/about0.jpg" alt="" name="About" width="156" height="60" border="0" onload=""></a></td>
+    <td class="STYLE4" width="156px" ><a href="help.php" target="_top" onClick="MM_nbGroup('down','group1','Help','',1)" onMouseOver="MM_nbGroup('over','Help','images/help1.jpg','',1)" onMouseOut="MM_nbGroup('out')"><img src="images/help0.jpg" alt="" name="Help" width="156" height="60" border="0" onload=""></a></td>
   </tr>
 </table>
 <p>&nbsp;</p>
+
 <p>&nbsp;</p>
 </div>
 <?php
@@ -115,7 +154,7 @@ File to view products
 
 error_reporting(E_ALL ^ E_NOTICE);
 // Create connection
-$conn= mysqli_connect("","root","password","matchmaker");
+$conn= mysqli_connect("","root","930517jzg","matchmaker");
 
 // Check connection
 if (mysqli_connect_errno()) {
@@ -593,6 +632,12 @@ else{
 ?>
 <br><br><br>
 <hr align="center" width="700" size="2">
+<p><br />
+</p>
 
+<div id="stcpDiv">
+<p align="center" class="STYLE9 STYLE2">copyright&copy; 2014 Developmental Disabilities Resource Center</p>
+<p align="center"><span class="STYLE11 STYLE3"><a href="http://http://www.ddrcco.com/">contact us</a></span></p>
+</div>
 </body>
 </html>
