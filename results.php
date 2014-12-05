@@ -96,7 +96,6 @@ table, th, td {
   </tr>
 </table>
 <p>&nbsp;</p>
-<hr align="center" width="700" size="2">
 <p>&nbsp;</p>
 </div>
 <?php
@@ -592,6 +591,8 @@ else{
 
 }
 ?>
+<br><br><br>
+<hr align="center" width="700" size="2">
 
 </body>
 </html>

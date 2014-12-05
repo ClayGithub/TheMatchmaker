@@ -93,6 +93,11 @@ body {
     </tr>
   </table>
 <p>&nbsp;</p>
+
+<p class="STYLE1" style = 'text-align:center; font-size:20px;'>Matchmaker is a website application that people with many different disabilities will be able to utilize in order to match them to the perfect technology device for what they want to accomplish.  The website will take into account the person's expected uses of the technology as well as their disability and offer a selection of devices, peripheral devices and software applications that will accomplish their goal and aid in the use of the device.  With the ability to obtain a device that suits their needs and accommodates their disability, they can have a positive interaction with technology for both professional and entertainment needs and will feel less hindered by their disability. <br>
+  <br>
+</p>
+
 <hr align="center" width="700" size="2">
 <p>&nbsp;</p>
 </div>

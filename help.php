@@ -92,6 +92,15 @@ body {
   </tr>
 </table>
 <p>&nbsp;</p>
+
+<p class="STYLE1" style = 'text-align:center; font-size:20px;'>We would like to help you to find a device that suits your needs. <br><br>
+The way to use the site is to click on the Matchmaker link above and then answer the questions.<br><br>
+Once you have answered the questions, just click submit!<br><br>
+After looking at your results, you can click to see the individual item, and after that you can click on the device again in order to see peripheral devices that will help accomplish your goal.<br><br>
+  <br>
+</p>
+
+
 <hr align="center" width="700" size="2">
 <p>&nbsp;</p>
 </div>
