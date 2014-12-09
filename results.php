@@ -73,17 +73,7 @@ body {
 
 
 <style>
-table, th, td {
-     border:0;
-	 
-	 font-size: 20px;
-	 background-color:#CEECF2;
-	 width:800px;
-	 text-align:center;
-	 cellspacing:20px;
-	 padding:20px;
-	 
-}
+
 .STYLE1 {font-family: "Times New Roman", Times, serif}
 .STYLE2 {
 	font-size: 12px;
@@ -94,14 +84,15 @@ table, th, td {
 	font-family: "Times New Roman", Times, serif;
 }
 .STYLE4{
-border: 5px solid #045973;
+
 background-color:#FFFFFF;
- border:2;
-  cellpadding:5;
-   cellspacing:5;
+ border:0;
+  padding:0px;
+   cellspacing:0px;
    height:60px;
-   padding:0px;
-   padding-bottom:3px;
+  
+  align:center;
+   
 }
 a:link {
 	text-decoration: none;
@@ -115,6 +106,17 @@ a:hover {
 a:active {
 	text-decoration: none;
 }
+table, th, td {
+     border:0;
+	 
+	 font-size: 20px;
+	 background-color:#CEECF2;
+	 width:800px;
+	 text-align:center;
+	 cellspacing:20px;
+	 padding:20px;
+	 
+}
 </style>
 </head>
 <body onLoad="MM_preloadImages('../images/matchmaker1.jpg','../images/results1.jpg','../images/about1.jpg','../images/help1.jpg')">
@@ -125,7 +127,7 @@ a:active {
   <br>
 </h2>
 
-<table  width="764"; class="STYLE4" border="2" cellpadding="5" cellspacing="5">
+<table  class="STYLE4" width="764" >
   <tr>
     <td class="STYLE4" width="296px" ><a href="index.php" target="_top" onClick="MM_nbGroup('down','group1','Matchmaker','',1)" onMouseOver="MM_nbGroup('over','Matchmaker','images/matchmaker1.jpg','',1)" onMouseOut="MM_nbGroup('out')"><img src="images/matchmaker0.jpg" alt="" name="Matchmaker" width="296" height="60" border="0" onload=""></a></td>
     <td class="STYLE4" width="156px" ><a href="results.php" target="_top" onClick="MM_nbGroup('down','group1','Results','',1)" onMouseOver="MM_nbGroup('over','Results','images/results1.jpg','',1)" onMouseOut="MM_nbGroup('out')"><img src="images/results0.jpg" alt="" name="Results" width="156" height="60" border="0" onload=""></a></td>

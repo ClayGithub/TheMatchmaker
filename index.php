@@ -15,7 +15,8 @@ session_start();
 
 <style>
 table, th, td {
-     border: 5px solid #045973;
+     padding:4px;
+	 align: center;
 }
 body,td,th {
 	font-family: Times New Roman, Times, serif;
@@ -120,7 +121,7 @@ function MM_nbGroup(event, grpName) { //v6.0
   <p>&nbsp;</p>
 </div>
 <div align="center">
-<table border="2" cellpadding="5" cellspacing="5" bordercolor="#FFFFFF">
+<table border="0" cellpadding="0" cellspacing="0" >
   <tr>
     <td><a href="index.php" target="_top" onclick="MM_nbGroup('down','group1','Matchmaker','',1)" onmouseover="MM_nbGroup('over','Matchmaker','images/matchmaker1.jpg','',1)" onmouseout="MM_nbGroup('out')"><img src="images/matchmaker0.jpg" alt="" name="Matchmaker" width="296" height="60" border="0" id="Matchmaker" onload="" /></a></td>
     <td><a href="results.php" target="_top" onclick="MM_nbGroup('down','group1','Results','',1)" onmouseover="MM_nbGroup('over','Results','images/results1.jpg','',1)" onmouseout="MM_nbGroup('out')"><img src="images/results0.jpg" alt="" name="Results" width="156" height="60" border="0" id="Results" onload="" /></a></td>
@@ -132,6 +133,7 @@ function MM_nbGroup(event, grpName) { //v6.0
 </div>
 <p><br />
   <a href="index.html" class="STYLE7"></a></p>
+  <div align="center">
 <form action='index.php' method='post' class="STYLE5" align="center">
 <p align="center" class="STYLE6">
 What would you like to do?<br><br>
@@ -166,7 +168,7 @@ What Kind of Device would you like?<br><br>
 
 
 </form>	
-
+</div>
 <p><br />
   <br />
 </p>
