@@ -24,8 +24,8 @@ body,td,th {
 	color: #000000;
 }
 body {
-	margin-left: 250px;
-	margin-right: 250px;
+	margin-left: 220px;
+	margin-right: 220px;
 	margin-bottom: 50px;
 	margin-top: 0px;
 }
@@ -50,16 +50,14 @@ a:hover {
 a:active {
 	text-decoration: none;
 }
-.STYLE8 {
-	color: #FF3300;
-	font-size: 18px;
-}
 .STYLE9 {font-size: 12px}
 .STYLE11 {font-size: 18px; color: #FF6600; }
 .STYLE12{background-image:url(images/button_submit.jpg);width:399px ;height:122px}
 a:link {
 	text-decoration: none;
 }
+.STYLE16 {font-size: 24px}
+.STYLE17 {color: #67100E}
 </style>
 <script type="text/JavaScript">
 <!--
@@ -114,13 +112,10 @@ function MM_nbGroup(event, grpName) { //v6.0
 </script>
 </head>
 <body onload="MM_preloadImages('images/matchmaker1.jpg','images/results1.jpg','images/about1.jpg','images/help1.jpg')">
-<div align="center">
-<img src="images/DDRC_logo.jpg" alt="logo" />
-  <h2 style = 'text-align:center; font-size:50px;'>Matching Technology To People</h2>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-</div>
-<div align="center">
+
+<div align="left"><img src="images/DDRC_logo.jpg" alt="logo" width="187" height="64" /></div>
+<h2  align="left" class="STYLE17" style = 'text-align:left; line-height:0%;font-size:50px;'>Matching Technology To People</h2>
+  <!--<div align="left">
 <table border="0" cellpadding="0" cellspacing="0" >
   <tr>
     <td><a href="index.php" target="_top" onclick="MM_nbGroup('down','group1','Matchmaker','',1)" onmouseover="MM_nbGroup('over','Matchmaker','images/matchmaker1.jpg','',1)" onmouseout="MM_nbGroup('out')"><img src="images/matchmaker0.jpg" alt="" name="Matchmaker" width="296" height="60" border="0" id="Matchmaker" onload="" /></a></td>
@@ -130,43 +125,60 @@ function MM_nbGroup(event, grpName) { //v6.0
   </tr>
 </table>
 <p>&nbsp;</p>
-</div>
+</div>-->
 <p><br />
   <a href="index.html" class="STYLE7"></a></p>
   <div align="center">
 <form action='index.php' method='post' class="STYLE5" align="center">
-<p align="center" class="STYLE6">
-What would you like to do?<br><br>
-	<select name="question1">
-	<option value="">Please Choose an Answer...</option>
-	<option value="ans1">Entertainment</option>
-	<option value="ans2">Communicate</option>
-	<option value="ans3">Scheduling</option>
-	<option value="ans4">Everyday Tasks</option>
-	<option value="ans5">All of the Above</option>
+<p style="line-height:50%" align="center" class="STYLE6">
+What would you like to do?<br><br><br>
 	
-	</select>
-  </p><br>
+	<input  name="question1" type="radio" value="ans1">
+	<span class="STYLE16">Entertainment
+	</input>
+	<input name="question1"  type="radio"  value="ans2">
+	Communicate
+	</input>
+	<input name="question1"  type="radio" value="ans3" >
+	Scheduling
+	</input>
+	<input name="question1"  type="radio" value="ans4">
+	Everyday Tasks
+	</input>
+	<br />
+	<br>
+  <input  name="question1" type="radio" value="ans5">
+  All of the Above
+  </input>
+  
+  </select>
+    </span></p>
+<br>
 
-<p align="center" class="STYLE6">
-What Kind of Device would you like?<br><br>
-	<select name="question2">
-	<option value="">Please Choose an Answer...</option>
-	<option value="type1">Mobile Device: Android</option>
-	<option value="type2">Mobile Device: Apple</option>
-	<option value="type3">Specialized Devices</option>
-	<option value="type4">No Preference</option>
+<p align="center" style="line-height:50%" class="STYLE6">
+What Kind of Device would you like?<br><br><br>
 	
-	
+	<input type="radio" name="question2" value="type1">
+	<span class="STYLE16">Mobile Device: Android
+	</input>
+	<input type="radio" name="question2"  value="type2">
+	Mobile Device: Apple
+	</input>
+	<input type="radio" name="question2" value="type3">
+	Specialized Devices
+	</input>
+	<br><br>
+	<input type="radio" name="question2" value="type4">
+	No Preference</span>
+	<span class="STYLE16">
+	</input>
 	</select>
-  </p><br>
+    </span></p><br>
 
 
 
 
   <input type='submit' value='' class="STYLE12" name='go' /> 
-
-
 </form>	
 </div>
 <p><br />
