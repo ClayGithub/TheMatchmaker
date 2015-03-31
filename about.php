@@ -65,36 +65,58 @@ table, th, td {
 	 align: center;
      
 }
-.STYLE1 {font-family: "Times New Roman", Times, serif}
 body,td,th {
-	font-family: Times New Roman, Times, serif;
-	color: #000000;
+	font-family: Vrinda;
+	color: #333333;
+	font-size: 12px;
 }
 body {
-	margin-left: 250px;
-	margin-right: 250px;
+	margin-left: 10px;
+	margin-right: 10px;
 	margin-bottom: 50px;
-	margin-top: 0px;
+	margin-top: 40px;
+	background-image: url(images/background.jpg);
+	background-repeat: repeat-x;
 }
 .STYLE2 {font-size: 12px}
 .STYLE3 {font-size: 18px}
 a:link {
 	text-decoration: none;
+	color: #000000;
 }
 a:visited {
 	text-decoration: none;
+	color: #000000;
 }
 a:hover {
-	text-decoration: underline;
+	text-decoration: none;
+	color: #FFFFFF;
 }
 a:active {
 	text-decoration: none;
+	color: #000000;
 }
-.STYLE4 {font-size: 24px}
+.STYLE4 {font-size: 24px; width:800px;}
+.STYLE5 {
+	font-size: 24px;
+	font-weight: bold;
+	color: #000000;
+}
+.STYLE6 {font-size: 24}
+.STYLE7 {font-weight: bold}
+.STYLE9 {font-size: 24; font-weight: bold; }
+.STYLE11 {font-weight: bold}
+.STYLE12 {color: #FFFFFF}
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312"></head>
 <body onLoad="MM_preloadImages('../images/matchmaker1.jpg','../images/results1.jpg','../images/about1.jpg','../images/help1.jpg')">
-<div align="center">
+<img src="images/title.jpg" align="left" alt="matchmaker" hspace="0" vspace="0" />
+<p align="right">&nbsp;</p>
+<p align="right">&nbsp;</p>
+<p align="right"><span class="STYLE21" align="right"><span class="STYLE22"><span class="STYLE5"><span class="STYLE5"><a href="index.php" target="_blank">Home </a>&nbsp; &nbsp; <a href="help.php" target="_blank">Help</a> &nbsp;&nbsp; <span class="STYLE12">About</span></a>&nbsp;</span><span class="STYLE5"></span><span class="STYLE6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p align="right"><span class="STYLE21" align="right">&nbsp;&nbsp;&nbsp;</span> <br />
+  <a href="index.html" class="STYLE7"></a></p>
+<!--<div align="center">
 <img src="images/DDRC_logo.jpg" alt="logo" />
 <h2 class="STYLE1" style = 'text-align:center; font-size:50px;'>Matching Technology To People<br>
   <br>
@@ -106,7 +128,7 @@ a:active {
       <td><a href="about.php" target="_top" onClick="MM_nbGroup('down','group1','About','',1)" onMouseOver="MM_nbGroup('over','About','./images/about1.jpg','',1)" onMouseOut="MM_nbGroup('out')"><img src="./images/about0.jpg" alt="" name="About" width="156" height="60" border="0" onload=""></a></td>
       <td><a href="help.php" target="_top" onClick="MM_nbGroup('down','group1','Help','',1)" onMouseOver="MM_nbGroup('over','Help','./images/help1.jpg','',1)" onMouseOut="MM_nbGroup('out')"><img src="./images/help0.jpg" alt="" name="Help" width="156" height="60" border="0" onload=""></a></td>
     </tr>
-  </table>
+  </table>-->
 <p>&nbsp;</p>
 
 <p>&nbsp;</p>
@@ -135,14 +157,16 @@ File to view products
 
 
 ?>
-</p>
-<p class="STYLE4">Matchmaker is a website application that people with many different disabilities will be able to utilize in order to match them to the perfect technology device for what they want to accomplish.  The website will take into account the person's expected uses of the technology as well as their disability and offer a selection of devices, peripheral devices and software applications that will accomplish their goal and aid in the use of the device.  With the ability to obtain a device that suits their needs and accommodates their disability, they can have a positive interaction with technology for both professional and entertainment needs and will feel less hindered by their disability. </p>
-<p class="STYLE4">&nbsp;</p>
+</p><div align="center">
+<p align="left" class="STYLE4">Matchmaker is a website application that people with many different disabilities will be able to utilize in order to match them to the perfect technology device for what they want to accomplish.</p>
+<p align="left" class="STYLE4">The website will take into account the person's expected uses of the technology as well as their disability and offer a selection of devices, peripheral devices and software applications that will accomplish their goal and aid in the use of the device.  </p>
+<p align="left" class="STYLE4">With the ability to obtain a device that suits their needs and accommodates their disability, they can have a positive interaction with technology for both professional and entertainment needs and will feel less hindered by their disability. </p>
+<p class="STYLE4">&nbsp;</p></div>
 <hr align="center" width="700" size="2">
 <p><br />
 </p>
 <div id="stcpDiv">
-<p align="center" class="STYLE9 STYLE2">copyright&copy; 2014 Developmental Disabilities Resource Center</p>
+<p align="center" >copyright&copy; 2014 Developmental Disabilities Resource Center</p>
 <p align="center"><span class="STYLE11 STYLE3"><a href="http://http://www.ddrcco.com/">contact us</a></span></p>
 </div>
 </body>

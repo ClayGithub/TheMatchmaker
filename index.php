@@ -19,15 +19,17 @@ table, th, td {
 	 align: center;
 }
 body,td,th {
-	font-family: Times New Roman, Times, serif;
+	font-family: Vrinda;
 	font-size: 12px;
-	color: #000000;
+	color: #333333;
 }
 body {
-	margin-left: 220px;
-	margin-right: 220px;
+	margin-left: 10px;
+	margin-right: 10px;
 	margin-bottom: 50px;
-	margin-top: 0px;
+	margin-top: 40px;
+	background-image: url(images/background.jpg);
+	background-repeat: repeat-x;
 }
 .STYLE5 {
 	font-family: Georgia, "Times New Roman", Times, serif;
@@ -43,21 +45,36 @@ a:link {
 }
 a:visited {
 	text-decoration: none;
+	color: #000000;
 }
 a:hover {
-	text-decoration: underline;
+	text-decoration: none;
+	color: #FFFFFF;
 }
 a:active {
 	text-decoration: none;
+	color: #000000;
 }
 .STYLE9 {font-size: 12px}
-.STYLE11 {font-size: 18px; color: #FF6600; }
-.STYLE12{background-image:url(images/button_submit.jpg);width:399px ;height:122px}
+.STYLE11 {
+	font-size: 18px;
+	color: #FF6600;
+	font-weight: bold;
+}
+.STYLE12{background-image:url(images/button.jpg);width:244px ;height:100px}
 a:link {
 	text-decoration: none;
+	color: #000000;
 }
 .STYLE16 {font-size: 24px}
-.STYLE17 {color: #67100E}
+.STYLE18 {font-size: 36px; font-family: Vrinda; }
+.STYLE19 {font-family: Vrinda}
+.STYLE21 {
+	font-size: 24px;
+	font-weight: bold;
+}
+.STYLE22 {color: #000000}
+.STYLE23 {color: #FFFFFF}
 </style>
 <script type="text/JavaScript">
 <!--
@@ -113,9 +130,10 @@ function MM_nbGroup(event, grpName) { //v6.0
 </head>
 <body onload="MM_preloadImages('images/matchmaker1.jpg','images/results1.jpg','images/about1.jpg','images/help1.jpg')">
 
-<div align="left"><img src="images/DDRC_logo.jpg" alt="logo" width="187" height="64" /></div>
-<h2  align="left" class="STYLE17" style = 'text-align:left; line-height:0%;font-size:50px;'>Matching Technology To People</h2>
-  <!--<div align="left">
+
+<!--
+<h2  align="left" class="STYLE17" style = 'text-align:left; line-height:0%;font-size:50px;'><img src="images/DDRC_logo.jpg" alt="logo" width="187" height="64" />Matching Technology To People</h2>--!>
+<!--<div align="left">
 <table border="0" cellpadding="0" cellspacing="0" >
   <tr>
     <td><a href="index.php" target="_top" onclick="MM_nbGroup('down','group1','Matchmaker','',1)" onmouseover="MM_nbGroup('over','Matchmaker','images/matchmaker1.jpg','',1)" onmouseout="MM_nbGroup('out')"><img src="images/matchmaker0.jpg" alt="" name="Matchmaker" width="296" height="60" border="0" id="Matchmaker" onload="" /></a></td>
@@ -126,46 +144,53 @@ function MM_nbGroup(event, grpName) { //v6.0
 </table>
 <p>&nbsp;</p>
 </div>-->
-<p><br />
-  <a href="index.html" class="STYLE7"></a></p>
-  <div align="center">
-<form action='index.php' method='post' class="STYLE5" align="center">
-<p style="line-height:50%" align="center" class="STYLE6">
-What would you like to do?<br><br><br>
-	
-	<input  name="question1" type="radio" value="ans1">
-	<span class="STYLE16">Entertainment
-	</input>
-	<input name="question1"  type="radio"  value="ans2">
-	Communicate
-	</input>
-	<input name="question1"  type="radio" value="ans3" >
-	Scheduling
-	</input>
-	<input name="question1"  type="radio" value="ans4">
-	Everyday Tasks
-	</input>
-	<br />
-	<br>
-  <input  name="question1" type="radio" value="ans5">
-  All of the Above
-  </input>
-  
-  </select>
-    </span></p>
-<br>
+<img src="images/title.jpg" align="left" alt="matchmaker" hspace="0" vspace="0" />
+<p align="right">&nbsp;</p>
+<p align="right">&nbsp;</p>
 
-<p align="center" style="line-height:50%" class="STYLE6">
+<p align="right"><span class="STYLE21" align="right"><span class="STYLE23">Home</span> <span class="STYLE22">&nbsp; &nbsp; <a href="help.php" target="_blank">Help</a> &nbsp;&nbsp; <a href="about.php" target="_blank">About</a></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p align="right"><span class="STYLE21" align="right">&nbsp;&nbsp;&nbsp;</span> <br />
+  <a href="index.html" class="STYLE7"></a></p>
+<div align="center">
+<form action='index.php' method='post' class="STYLE5" align="center">
+<p style="line-height:50%" align="center" class="STYLE6">&nbsp;</p>
+<p align="center" class="STYLE18" style="line-height:50%">What would you like to do?<br>
+    <br>
+  <br>
+  
+  <input  name="question1" type="radio" value="ans1">
+  <span class="STYLE16">Entertainment<img src="entertainment.jpg" width="38" height="37" hspace="5" align="absmiddle" />
+    </input>
+    <input name="question1"  type="radio"  value="ans2">
+    Communicate<img src="communicate.png" width="34" height="33" hspace="5" align="absmiddle" />
+    </input>
+    <input name="question1"  type="radio" value="ans3" >
+    Scheduling<img src="schedule.png" width="33" height="31" hspace="5" align="absmiddle" />
+    </input>
+    <input name="question1"  type="radio" value="ans4">
+    Everyday Tasks<img src="everyday tasks.png" width="37" height="35" align="absmiddle" />
+    </input>
+    <br />
+    <br>
+    <input  name="question1" type="radio" value="ans5">
+    All of the Above
+    </input>
+    
+    </select>
+  </span></p>
+<span class="STYLE19"><br>
+</span>
+<p align="center" class="STYLE18" style="line-height:50%">
 What Kind of Device would you like?<br><br><br>
 	
 	<input type="radio" name="question2" value="type1">
-	<span class="STYLE16">Mobile Device: Android
+	<span class="STYLE16">Mobile Device: Android<img src="android-4096-black.png" width="48" height="48" align="absmiddle" />
 	</input>
 	<input type="radio" name="question2"  value="type2">
-	Mobile Device: Apple
+	Mobile Device: Apple<img src="apple.png" width="42" height="42" align="absmiddle" />
 	</input>
 	<input type="radio" name="question2" value="type3">
-	Specialized Devices
+	Specialized Devices<span class="STYLE18" style="line-height:50%"><img src="tag_special-512.png" width="39" height="40" hspace="5" align="absmiddle" /></span>
 	</input>
 	<br><br>
 	<input type="radio" name="question2" value="type4">
@@ -173,7 +198,8 @@ What Kind of Device would you like?<br><br><br>
 	<span class="STYLE16">
 	</input>
 	</select>
-    </span></p><br>
+    </span></p>
+<br>
 
 
 
@@ -190,7 +216,8 @@ What Kind of Device would you like?<br><br><br>
 <p><br />
 </p><div id="stcpDiv">
 <p align="center" class="STYLE9">copyright&copy; 2014 Developmental Disabilities Resource Center</p>
-<p align="center"><span class="STYLE11"><a href="http://http://www.ddrcco.com/">contact us</a></span></p></div>
+<p align="center"><span class="STYLE11"><a href="http://http://www.ddrcco.com/">contact us</a></span></p>
+</div>
 <p>
 <?php
 

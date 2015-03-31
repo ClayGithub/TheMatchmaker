@@ -59,52 +59,46 @@ function MM_nbGroup(event, grpName) { //v6.0
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312"><style type="text/css">
 <!--
 body,td,th {
-	color: #000000;
-	font-family: Times New Roman, Times, serif;
+	color: #333333;
+	font-family: Vrinda;
+	font-size: 12px;
 }
 body {
-	margin-left: 250px;
-	margin-right: 250px;
+	margin-left: 10px;
+	margin-right: 10px;
 	margin-bottom: 50px;
-	margin-top: 0px;
+	margin-top: 40px;
+	background-image: url(images/background.jpg);
+	background-repeat: repeat-x;
 }
 -->
 </style>
 
 
 <style>
-
-.STYLE1 {font-family: "Times New Roman", Times, serif}
 .STYLE2 {
 	font-size: 12px;
 	font-family: "Times New Roman", Times, serif;
 }
 .STYLE3 {
 	font-size: 18px;
-	font-family: "Times New Roman", Times, serif;
+	font-family: "Vrinda", Times, serif;
 }
-.STYLE4{
-
-background-color:#FFFFFF;
- border:0;
-  padding:0px;
-   cellspacing:0px;
-   height:60px;
-  
-  align:center;
-   
-}
-a:link {
+a.title:link {
 	text-decoration: none;
+	color: #000000;
 }
-a:visited {
+a.title:visited {
 	text-decoration: none;
+	color: #000000;
 }
-a:hover {
-	text-decoration: underline;
-}
-a:active {
+a.title:hover {
 	text-decoration: none;
+	color: #FFFFFF;
+}
+a.title:active {
+	text-decoration: none;
+	color: #000000;
 }
 table, th, td {
      border:0;
@@ -117,11 +111,42 @@ table, th, td {
 	 padding:20px;
 	 
 }
+.STYLE5 {font-size: 18px}
+.STYLE6 {font-size: 18}
+.STYLE7 {font-weight: bold}
+.STYLE9 {font-size: 18; font-weight: bold; }
+.STYLE10 {font-size: 24px}
+.STYLE11 {font-size: 18px; font-weight: bold; }
+.STYLE12 {color: #000000}
+.STYLE13 {font-size: 24px; font-weight: bold; color: #000000; }
+.STYLE14 {color: #FFFFFF}
+a:link {
+	text-decoration: none;
+	color: #000000;
+}
+a:visited {
+	text-decoration: none;
+	color: #000000;
+}
+a:hover {
+	text-decoration: none;
+	color: #6D1D1C;
+}
+a:active {
+	text-decoration: none;
+	color: #000000;
+}
 </style>
 </head>
 <body onLoad="MM_preloadImages('../images/matchmaker1.jpg','../images/results1.jpg','../images/about1.jpg','../images/help1.jpg')">
+<img src="images/title.jpg" align="left"alt="matchmaker" hspace="0" vspace="0" />
+<p align="right">&nbsp;</p>
+<p align="right">&nbsp;</p>
 
-<div align="center">
+<p align="right"><span class="STYLE21" align="right"><span class="STYLE22"><span class="STYLE5"><span class="STYLE6"><span class="STYLE7"><span class="STYLE10"><span class="STYLE12"><span class="STYLE14 STYLE14"><a class="title" href="index.php" target="_blank">Home</a></span>&nbsp; &nbsp; &nbsp;&nbsp;<a class="title" href="help.php" target="_blank">Help</a> &nbsp;&nbsp; <a class="title" href="about.php" target="_blank">About</a></span></span></span></span></span></span><span class="STYLE13">&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p align="right"><span class="STYLE21" align="right">&nbsp;&nbsp;&nbsp;</span> <br />
+  <a href="index.html" class="STYLE7"></a></p>
+<!--<div align="center">
 <img src="images/DDRC_logo.jpg" alt="logo" />
 <h2 class="STYLE1" style = 'text-align:center; font-size:50px;'>Matching Technology To People<br>
   <br>
@@ -138,7 +163,7 @@ table, th, td {
 <p>&nbsp;</p>
 
 <p>&nbsp;</p>
-</div>
+</div>-->
 <?php
 
 
@@ -638,7 +663,7 @@ else{
 </p>
 
 <div id="stcpDiv">
-<p align="center" class="STYLE9 STYLE2">copyright&copy; 2014 Developmental Disabilities Resource Center</p>
+<p align="center" >copyright&copy; 2014 Developmental Disabilities Resource Center</p>
 <p align="center"><span class="STYLE11 STYLE3"><a href="http://http://www.ddrcco.com/">contact us</a></span></p>
 </div>
 </body>

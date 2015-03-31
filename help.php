@@ -65,39 +65,59 @@ table, th, td {
       padding:4px;
 	 align: center;
 }
-.STYLE1 {font-family: "Times New Roman", Times, serif}
 body,td,th {
-	color: #000000;;
-	font-family: Times New Roman, Times, serif;
+	color: #333333;
+	;
+	font-family: Vrinda;
+	font-size: 12px;
 }
 body {
-	margin-left: 250px;
-	margin-right: 250px;
+	margin-left: 10px;
+	margin-right: 10px;
 	margin-bottom: 50px;
-	margin-top: 0px;
+	margin-top: 40px;
+	background-image: url(images/background.jpg);
+	background-repeat: repeat-x;
 }
 .STYLE2 {
 	font-size: 12px;
 	font-family: "Times New Roman", Times, serif;
 }
-.STYLE3 {font-size: 18px}
+.STYLE3 {
+	font-size: 18px;
+	font-weight: bold;
+}
 a:link {
 	text-decoration: none;
+	color: #000000;
 }
 a:visited {
 	text-decoration: none;
+	color: #000000;
 }
 a:hover {
-	text-decoration: underline;
+	text-decoration: none;
+	color: #FFFFFF;
 }
 a:active {
 	text-decoration: none;
+	color: #000000;
 }
-.STYLE4 {font-size: 24px}
+.STYLE4 {font-size: 24px; width:800px;}
+.STYLE7 {font-weight: bold}
+.STYLE8 {font-size: 24px}
+.STYLE9 {color: #000000; font-weight: bold;}
+.STYLE10 {color: #FFFFFF}
 </style>
 </head>
 <body onLoad="MM_preloadImages('../images/matchmaker1.jpg','../images/results1.jpg','../images/about1.jpg','../images/help1.jpg')">
-<div align="center">
+<img src="images/title.jpg" align="left" alt="matchmaker" hspace="0" vspace="0" />
+<p align="right">&nbsp;</p>
+<p align="right">&nbsp;</p>
+<p align="right"><span class="STYLE21 STYLE8" align="right"><span class="STYLE22  STYLE9"><a href="index.php" target="_blank">Home </a>&nbsp; &nbsp; <span class="STYLE10">Help</span> &nbsp;&nbsp; <a href="about.php" target="_blank">About</a></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p align="right"><span class="STYLE21" align="right">&nbsp;&nbsp;&nbsp;</span> <br />
+  <a href="index.html" class="STYLE7"></a></p>
+<!--<div align="center">
 <img src="images/DDRC_logo.jpg" alt="logo" />
 <h2 class="STYLE1" style = 'text-align:center; font-size:50px;'>Matching Technology To People<br>
   <br>
@@ -113,7 +133,7 @@ a:active {
 <p>&nbsp;</p>
 
 <p>&nbsp;</p>
-</div>
+</div>-->
 
 
 
@@ -141,21 +161,23 @@ File to view products
 
 
 ?>
-</p>
-<p class="STYLE4">We would like to help you to find a device that suits your needs.<br>
+</p><div align="center" width="800px">
+<!--<p align="center" class="STYLE4">&nbsp;</p>-->
+<p align="center" class="STYLE4">&nbsp;</p>
+<p align="left" class="STYLE4">We would like to help you to find a device that suits your needs.<br>
   <br>
 The way to use the site is to click on the Matchmaker link above and then answer the questions.<br>
 <br>
   Once you have answered the questions, just click submit!<br>
   <br>
 After looking at your results, you can click to see the individual item, and after that you can click on the device again in order to see peripheral devices that will help accomplish your goal.</p>
-<p class="STYLE4">&nbsp;</p>
+<p class="STYLE4">&nbsp;</p></div>
 <hr align="center" width="700" size="2">
 <p><br />
 </p>
 <div id="stcpDiv">
-<p align="center" class="STYLE9 STYLE2">copyright&copy; 2014 Developmental Disabilities Resource Center</p>
-<p align="center"><span class="STYLE11 STYLE3"><a href="http://http://www.ddrcco.com/">contact us</a></span></p>
+<p align="center" >copyright&copy; 2014 Developmental Disabilities Resource Center</p>
+<p align="center"><span class="STYLE3"><a href="http://http://www.ddrcco.com/">contact us</a></span></p>
 </div>
 
 </body>
