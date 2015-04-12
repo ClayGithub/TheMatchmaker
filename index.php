@@ -159,16 +159,16 @@ function MM_nbGroup(event, grpName) { //v6.0
   <br>
   
   <input  name="question1" type="radio" value="ans1">
-  <span class="STYLE16">Entertainment<img src="entertainment.jpg" width="38" height="37" hspace="5" align="absmiddle" />
+  <span class="STYLE16">Entertainment<img src="images/entertainment.jpg" width="38" height="37" hspace="5" align="absmiddle" />
     </input>
     <input name="question1"  type="radio"  value="ans2">
-    Communicate<img src="communicate.png" width="34" height="33" hspace="5" align="absmiddle" />
+    Communicate<img src="images/communicate.png" width="34" height="33" hspace="5" align="absmiddle" />
     </input>
     <input name="question1"  type="radio" value="ans3" >
-    Scheduling<img src="schedule.png" width="33" height="31" hspace="5" align="absmiddle" />
+    Scheduling<img src="images/schedule.png" width="33" height="31" hspace="5" align="absmiddle" />
     </input>
     <input name="question1"  type="radio" value="ans4">
-    Everyday Tasks<img src="everyday tasks.png" width="37" height="35" align="absmiddle" />
+    Everyday Tasks<img src="images/everyday tasks.png" width="37" height="35" align="absmiddle" />
     </input>
     <br />
     <br>
@@ -184,13 +184,13 @@ function MM_nbGroup(event, grpName) { //v6.0
 What Kind of Device would you like?<br><br><br>
 	
 	<input type="radio" name="question2" value="type1">
-	<span class="STYLE16">Mobile Device: Android<img src="android-4096-black.png" width="48" height="48" align="absmiddle" />
+	<span class="STYLE16">Mobile Device: Android<img src="images/android-4096-black.png" width="48" height="48" align="absmiddle" />
 	</input>
 	<input type="radio" name="question2"  value="type2">
-	Mobile Device: Apple<img src="apple.png" width="42" height="42" align="absmiddle" />
+	Mobile Device: Apple<img src="images/apple.png" width="42" height="42" align="absmiddle" />
 	</input>
 	<input type="radio" name="question2" value="type3">
-	Specialized Devices<span class="STYLE18" style="line-height:50%"><img src="tag_special-512.png" width="39" height="40" hspace="5" align="absmiddle" /></span>
+	Specialized Devices<span class="STYLE18" style="line-height:50%"><img src="images/tag_special-512.png" width="39" height="40" hspace="5" align="absmiddle" /></span>
 	</input>
 	<br><br>
 	<input type="radio" name="question2" value="type4">

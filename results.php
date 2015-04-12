@@ -104,11 +104,13 @@ table, th, td {
      border:0;
 	 
 	 font-size: 20px;
-	 background-color:#CEECF2;
-	 width:800px;
+	 background-color:#FFFFFF;
+	 width:1000px;
 	 text-align:center;
 	 cellspacing:20px;
 	 padding:20px;
+	 border: 1px solid black;
+	 
 	 
 }
 .STYLE5 {font-size: 18px}
@@ -181,7 +183,7 @@ File to view products
 
 error_reporting(E_ALL ^ E_NOTICE);
 // Create connection
-$conn= mysqli_connect("","root","930517jzg","matchmaker");
+$conn= mysqli_connect("","root","password","matchmaker");
 
 // Check connection
 if (mysqli_connect_errno()) {
@@ -658,7 +660,7 @@ else{
 }
 ?>
 <br><br><br>
-<hr align="center" width="700" size="2">
+<hr align="center" width="1500px" size="2">
 <p><br />
 </p>
 
