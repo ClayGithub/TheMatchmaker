@@ -1,3 +1,6 @@
+
+
+
 <div id="manage_device">
 
 <div>

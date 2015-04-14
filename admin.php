@@ -21,8 +21,10 @@
  	<link rel="stylesheet" type="text/css" href="admin_new.css">
 
 </head>
-<body class="body">
 
+
+<body id="bodyh">
+<div>
  	<img src="logo.jpg" alt="company logo" style="width:99px;height:37px;" align="left"><br/><br/><br>
  
 
@@ -30,14 +32,14 @@
  	
  	<div id="menu1">
  		<ul type=square>
-	 		<li><a href="manage_device.php" style="text-decoration:none;">Manage Devices</a></li>
- 			<li><a href="manage_peripheral.php" style="text-decoration:none;">Manage Peripherals</a></li>
- 			<li><a href="logout.php" style="text-decoration:none;">Log Out </a></li>
+	 		<li><a href="manage_device.php" style="text-decoration:bold;">Manage Devices</a></li>
+ 			<li><a href="manage_peripheral.php" style="text-decoration:bold;">Manage Peripherals</a></li>
+ 			<li><a href="logout.php" style="text-decoration:bold;">Log Out </a></li>
  		</ul>
  	</div>
  	<br/>
  	<hr id="end">
  	<?php footer();?>
-
+</div>
 </body>
 </hmtl> 

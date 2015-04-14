@@ -1,6 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3//DTD XHTML 1.0 Strict//EN"
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
+	
 <html xmlns="http:www.w3.org/1999/xhmtl" xml:lang="en" lang="en">
 <head>
 	<title>add device</title>
@@ -8,12 +9,12 @@
 	<link rel="stylesheet" type="text/css" href="admin_new.css"> 
 	<?php include_once("admin_fns.php"); ?>
 	<?php include_once('header.php'); ?>
-			<?php include_once('bar.php'); ?>
+			
 </head>
 <body class="body">
 	<div id="table">	
 		<br>
-		<h2 id="head117">Add A New Device</h2><br>
+		<h2 id="head1">Add A New Device</h2><br>
 	<?php 
 
 	require_once 'config.php';
@@ -51,7 +52,7 @@
 	}
 ?>
 
-	<table id="form">
+	<table style="width:70%" id="ptable">
 		<tr>
 		<td>
 		<form action="add_device.php" method="post">
@@ -116,6 +117,7 @@
 				<input type="text" name="peri_device_id" size="5" />
 			</td>
 			</tr>
+			
 			<tr>
 				<td class="first">
 					<label for="text"> Device Description:</label>

@@ -1,38 +1,46 @@
-body {
-	font-family: "trebuchet ms", verdana, sans-serif;
-	font-size: 12px;
-	line-height: 1.5em;
-	color: #333;
-	background: #ffffff;
-	margin: 0;
-	padding: 0;
-	text-align: center;
-	width: 100%;
+
+
+html {
+       
 }
 
 p {
 	margin-top: 10px;
+	
 }
 
 a:link {
 	text-decoration: none;
-	color: #000;
+	color: #000000;
 }
 
 a:visited {
 	text-decoration: none;
 	border-bottom: 1px dotted #369;
-	color: #000;
+	color: #000000;
 }
 
 a:hover, a:active {
 	text-decoration: none;
 	border-bottom: 1px solid #036;
-	color: #000;
+	color: #000000;
 }
 
 img {
 	border: 0;
+}
+
+#bodyh {
+	font-family: "trebuchet ms", verdana, sans-serif;
+	font-size: 12px;
+	line-height: 1.5em;
+	color: #333;
+	background: ##f6f6f6;
+	margin: 0 0 0 0;
+	padding: 0;
+	text-align: center;
+	width: 100%;
+	
 }
 
 #container {
@@ -40,11 +48,12 @@ img {
 	top: 85px;
 	left: 0px;
 	background: #ffffff;
-	margin: 0 auto 0 auto;
+	
 	text-align: left;
 	width: 100%;
 	height: 100%;
 	z-index: -1;
+	
 }
 
 #menu {
@@ -62,6 +71,14 @@ img {
 	text-align:center;
 }
 
+#menu1{
+	font-family: "trebuchet ms", verdana, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	
+	text-align:left;
+}
+
 #header {
 	position: fixed;
 	top: 0px;
@@ -77,7 +94,7 @@ img {
 	font-size: 30px;
 	text-transform: uppercase;
 	letter-spacing: 0.3em;
-	color: #fff;
+	color: #FFFFFF;
 }
 
 #main {
@@ -87,7 +104,7 @@ img {
 }
 
 #bar {
-	float: left;
+	float: center;
 	width: 200px;
 	background: #eee;
 	z-index: 1;              
@@ -95,6 +112,7 @@ img {
 	margin-right: 30px;
 	height: 100%;
 	position: fixed;
+	
 }
 
 #bar h1 {
@@ -109,26 +127,30 @@ img {
 }
 
 #manage_device{
+object.style.overflow="scroll"
 	position: fixed;
 	margin-top: 110px;
 	margin-bottom: 30px;
+	margin-left: 150px;
 	text-align: left;
-	overflow: scroll;
-	background: #ffffff;    
-	left: 250px;
+	
+	
+	background: #FFFFFF;    
+	
 	width: 80%;
-	height: 83%;
+	height: 70%;
+	
 }
 
 #innertable{
-	position: relative;
-	margin-left: -100px;
-	width: 100%;
-
+	position: center;
+	margin-left: -200px;
+	width: 80%;
+	
 }
 
 #head{
-	text-align: center;
+	text-align: left;
 }
 
 #line{
@@ -141,7 +163,7 @@ img {
 
 #table{
 	margin-top: 100px;
-	margin-left: 0px;
+	margin-left: 200px;
 	margin-right: 200px;
 	float: right;
 	width: 100%;
@@ -150,9 +172,11 @@ img {
 
 textarea{
 	display: block; 
-	width: 90%; 
-	height: 500%;
+	width: 100%; 
+	height: 125%;
 	text-align: left;
+	vertical-align: auto;
+	
 }
 
 fieldset {
@@ -169,6 +193,7 @@ fieldset {
 table, th, td {
 	border: 0px solid black;
 	border-collapse: collapse;
+	
 }
 
 th, td.first {
@@ -181,6 +206,7 @@ th, td.second {
 	padding: 5px;
 	width: 10%;
 	text-align: left;
+	
 }
 
 th, td.third {
@@ -191,12 +217,13 @@ th, td.third {
 }
 
 #head1{
-	margin-top: 120px;
-	margin-left: -90px;
+	position:center;
+	text-align:center;
 }
 
 #ptable{
-	margin-left: 100px;
+	margin-left: 50px;
+	
 }
 
 #bottom_line11{
@@ -207,17 +234,30 @@ th, td.third {
 
 body{
 	background-color: #f6f6f6;
-
-	margin: 2px 0 0 0;
-	padding: 0px;
+	
+	margin: 5px 5px 5px 100px;
+	padding: 5px;
 	font-family: sans-serif, arial, helvetica;
-	font-size: 11pt;
+	font-size: 12pt;
+	position: center;
+	
+	font-family: "trebuchet ms", verdana, sans-serif;
+	font-size: 12px;
+	line-height: 1.5em;
+	
+	
+	
+	
+	text-align: center;
+	width: 100%;
+	
 }
+
 
 h1{
 	font-family: sans-serif, arial, helvetica;
-	font-size: 46pt;
-	margin: 10px 0 20px 0;
+	font-size: 45pt;
+	margin: 20px 5px 5px 5px;
 	font-weight: bold;
 	-webkit-text-shadow:1px 1px 2px rgba(0,0,0,0.2);
 	-moz-text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
@@ -229,8 +269,6 @@ h1{
 	color: #666;
 }
 
-a{ color: black }
-a:visited{ color: gray;}
 
 .navbar{
 	width: 905px;
@@ -241,11 +279,12 @@ a:visited{ color: gray;}
 }
 
 .form{
-	width: 500px;
+	width: 200px;
 	height: 30px;
 	margin-top: 10px;
 	border-radius: 70px;
-	margin: 0px 400px 300px 100px;
+	margin: 200px 400px 300px 100px;
+	
 }
 
 .pass{
@@ -270,305 +309,3 @@ a:visited{ color: gray;}
 
 
 /*-----new design pattern----- */
-
-
-.body{
-	font-family: "trebuchet ms", sans-serif, arial, helvetica;
-	font-size: 12px;
-	line-height: 1.5em;
-	color: #333;
-	background-color: #eeeeee; 
-	margin: 0;
-	padding: 0;
-	text-align: center;
-	width: 100%;
-}
-
-#headerr{
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	height: 60px;
-	width: 100%;
-	background: #d1d1e0;
-	padding-top: 9px;
-}
-
-#headerr h1{
-	font-size: 20px;
-	text-transform: uppercase;
-	letter-spacing: 0.3em;
-	text-align: center;
-	text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-	color: #523d66; 
-}
-
-#title{
-	position: absolute;
-	height: 30px;
-	background-color: #00ff00;
-}
-
-#head17{
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16pt;
-    margin: 50px 0 20px 0;
-    font-weight: bold;
-    -webkit-text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-    -moz-text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-    color: #444;
-    text-align: center;
-}
-
-#head117{
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16pt;
-    margin: -10px 0 10px 300px;
-    font-weight: bold;
-    -webkit-text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-    -moz-text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-    color: #444;
-    text-align: center;
-}
-
-#form{
-	width: 70%;
-	margin-left: 200px;
-}
-
-#menu1{
-	line-height:30px;
-	background-color:#eeeeee;
-	font-size: 20px;
-	padding:5px; 
-	text-align: left;
-	margin-top: 30px;
-	margin-right: 500px;
-	margin-left: 500px;
-	margin-bottom: 100px;
-}
-
-a:link {
-	text-decoration: none;
-	color: #eee;
-}
-
-a:visited {
-	text-decoration: none;
-	color: #777;
-}
-
-a:hover, a:active {
-	text-decoration: none;
-	border-bottom: 1px solid #036; 
-	color: #0000ff;
-}
-
-
-#end{
-	margin-top: 150px;
-
-}
-
-textarea{
-	display: block; width: 90%; height: 500%;
-}
-
-fieldset {
-	display: block;
-	margin-left: 0px;
-	margin-right: 0px;
-	padding-top: 0.35em;
-	padding-bottom: 0.625em;
-	padding-left: 0.75em;
-	padding-right: 0.75em;
-	border: 2px groove (internal value);
-} 
-
-table, th, td {
-	border: 0px solid black;
-	border-collapse: collapse;
-}
-
-th, td.first {
-	padding: 5px;
-	width: 10%;
-	text-align: right;
-}
-
-th, td.second {
-	padding: 5px;
-	width: 10%;
-	text-align: left;
-}
-
-th, td.third {
-	padding: 5px;
-	width: 10%;
-	text-align: left;
-	clear: both;
-}
-
-#add_device{
-	margin-left: -250px;
-	color: #4c4c4c;
-}
-
-#admin_page{
-	margin-top: 100px;
-}
-
-#bottom{
-	margin-top: 100px;
-}
-
-#login{
-	margin-top: 50px;
-}
-
-#login_form{
-	margin-top: 10px;
-	margin-right: 500px;
-	margin-left: 500px;
-	margin-bottom: 100px;
-}
-
-#body{
-	background-color: #00FF00;
-}
-
-#bottom_line{
-	margin-top: 70px;
-}
-
-#bottom_line1{
-	margin-top: 190px;
-}
-
-
-#list{
-	text-align: left; 
-}  
-
-#line{
-	width: 90%;
-	color: 555;
-	margin-left: 0px;
-}
-
-#edit{
-	color: blue;
-	border-radius: 5px 5px 3px 3px;
-	background: lime;
-	padding: 3px;
-}
-
-#delete{
-	color: red;
-	border-radius: 5px 5px 3px 3px;
-	background: orange;
-	padding: 5px;
-}
-
-/*-----------------------*/
-
-ul#smenu {
-    padding: 0;
-}
-
-ul#smenu li {
-    display: inline;
-}
-
-ul#smenu li a {
-    background-color: #eee;
-    color: #777;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 11px 11px 11px 11px;
-    font-family: 'Open Sans', sans-serif;
-}
-
-ul#smenu li a:hover {
-    background-color: #ECCEF5;
-}
-
-#sbody{
-	color: #555;
-	font-weight: bold;
-	text-align: center;
-	margin-top: 150px;
-}
-
-#shead{
-	font-family: 'Open Sans', sans-serif;
-    font-size: 16pt;
-    margin: 10px 0 10px 10px;
-    font-weight: bold;
-    -webkit-text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-    -moz-text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-    color: #444;
-
-}
-
-#select{
-	font-family: 'Open Sans', sans-serif;
-    font-size: 13pt;
-    font-weight: bold;
-    -webkit-text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-    -moz-text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-    color: #444;
-    text-align: center;
-}
-
-#register{
-	margin-top: 70px;
-	font-family: 'Open Sans', sans-serif;
-    font-size: 20pt;
-    font-weight: bold;
-    -webkit-text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-    -moz-text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-    color: #444;
-    text-align: center;
-}
-
-#rform{
-	margin-top: 30px;
-	margin-left: 300px;
-	margin-right: 300px;
-	margin-bottom: 90px;
-}
-
-#email{
-	margin-left: 70px;
-}
-
-#rpass{
-	margin-left: 10px;
-}
-
-#rconpass{
-	margin-left: -50px;
-}
-
-#rline{
-	margin-left: 140px;
-	margin-top: -10px;
-}
-
-#rsline{
-	margin-left: 116px;
-	margin-top: -20px;
-}
-#footer{
-
-	font-family: arial, helvetica, sans-serif;
-	font-size: 15px;
-	text-align: right;
-	color: 52526a;
-}

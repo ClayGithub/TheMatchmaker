@@ -1,7 +1,7 @@
 <div id="manage_device">
 
 <div>
-	<h1 id="head17">Manage Peripheral Device</h1>
+	<h1>Manage Peripheral Device</h1>
 <?php
  
 include_once('header.php');

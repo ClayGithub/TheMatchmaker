@@ -12,7 +12,8 @@
 
 </head>
 <body class="body">
-	
+	<div id="table">
+	<h2 id="head1">Add Peripheral Device</h2>
 	<?php 
 
 	require_once 'config.php';
@@ -43,18 +44,17 @@
 		}
 
 	}else{
-
 		echo "Fill in the blank form first and then submit again.";
 	}
 ?>
 	<br>
-	<h2 id="head1">Add Peripheral Device</h2>
+	
 
 	<table style="width:70%" id="ptable">
 	<tr>
 	<td>
 	<form action="add_peripheral.php" method="post">
-		<table align="center">
+		<table>
 		<tr>
 		<td  class="first">
 			<label for="devicename">Device Name:</label>
@@ -111,7 +111,7 @@
 	</td>
 	</tr>
 	</table>
-	
+	</div>
 	<?php
 		include_once('footer.php');
 	?>
