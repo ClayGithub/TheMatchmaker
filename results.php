@@ -76,10 +76,6 @@ body {
 
 
 <style>
-.STYLE2 {
-	font-size: 12px;
-	font-family: "Times New Roman", Times, serif;
-}
 .STYLE3 {
 	font-size: 18px;
 	font-family: "Vrinda", Times, serif;
@@ -98,7 +94,37 @@ a.title:hover {
 }
 a.title:active {
 	text-decoration: none;
+	font-weight:bold;
+	font-style:italic;
 	color: #000000;
+}
+a.underl{ text-decoration:underline;
+font-weight:bold;
+	font-style:italic;
+        color:#6D1D1C;}
+a.underl:link {
+	text-decoration:underline;
+	font-weight:bold;
+	font-style:italic;
+        color:#6D1D1C;;
+}
+a.underl:visited {
+	text-decoration:underline;
+	font-weight:bold;
+	font-style:italic;
+        color:#6D1D1C;
+}
+a.underl:hover {
+	
+	font-weight:bold;
+	font-style:italic;
+        color:#6D1D1C;
+}
+a.underl:active {
+	text-decoration:underline;
+	font-weight:bold;
+	font-style:italic;
+        color:#6D1D1C;
 }
 table, th, td {
      border:0;
@@ -116,7 +142,6 @@ table, th, td {
 .STYLE5 {font-size: 18px}
 .STYLE6 {font-size: 18}
 .STYLE7 {font-weight: bold}
-.STYLE9 {font-size: 18; font-weight: bold; }
 .STYLE10 {font-size: 24px}
 .STYLE11 {font-size: 18px; font-weight: bold; }
 .STYLE12 {color: #000000}
@@ -138,6 +163,7 @@ a:active {
 	text-decoration: none;
 	color: #000000;
 }
+.STYLE16 {color: #6d1d1c}
 </style>
 </head>
 <body onLoad="MM_preloadImages('../images/matchmaker1.jpg','../images/results1.jpg','../images/about1.jpg','../images/help1.jpg')">
@@ -148,7 +174,9 @@ a:active {
 <p align="right"><span class="STYLE21" align="right"><span class="STYLE22"><span class="STYLE5"><span class="STYLE6"><span class="STYLE7"><span class="STYLE10"><span class="STYLE12"><span class="STYLE14 STYLE14"><a class="title" href="index.php" target="_blank">Home</a></span>&nbsp; &nbsp; &nbsp;&nbsp;<a class="title" href="help.php" target="_blank">Help</a> &nbsp;&nbsp; <a class="title" href="about.php" target="_blank">About</a></span></span></span></span></span></span><span class="STYLE13">&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
 <p align="right"><span class="STYLE21" align="right">&nbsp;&nbsp;&nbsp;</span> <br />
   <a href="index.html" class="STYLE7"></a></p>
-<!--<div align="center">
+<div align="center">
+  <p>
+    <!--<div align="center">
 <img src="images/DDRC_logo.jpg" alt="logo" />
 <h2 class="STYLE1" style = 'text-align:center; font-size:50px;'>Matching Technology To People<br>
   <br>
@@ -166,7 +194,7 @@ a:active {
 
 <p>&nbsp;</p>
 </div>-->
-<?php
+    <?php
 
 
 
@@ -183,7 +211,7 @@ File to view products
 
 error_reporting(E_ALL ^ E_NOTICE);
 // Create connection
-$conn= mysqli_connect("","root","password","matchmaker");
+$conn= mysqli_connect("","root","930517jzg","matchmaker");
 
 // Check connection
 if (mysqli_connect_errno()) {
@@ -659,8 +687,15 @@ else{
 
 }
 ?>
-<br><br><br>
-<hr align="center" width="1500px" size="2">
+  </p>
+  <p>&nbsp;</p>
+  <p><span class="STYLE10">Start a <span class="STYLE16"><a href="index.php" class="underl" target="_blank">NEW SEARCH <a href="index.php" class="underl" target="_blank"></a></span></span><img src="images/pointing.png" alt="NewSearch" width="38" height="35" align="top"></p>
+  <p><br>
+    <br>
+    <br>
+  </p>
+</div>
+<hr align="center" width="700px" size="2">
 <p><br />
 </p>
 
