@@ -127,7 +127,7 @@ img {
 }
 
 #manage_device{
-object.style.overflow="scroll"
+    object.style.overflow="scroll"
 	position: fixed;
 	margin-top: 110px;
 	margin-bottom: 30px;
@@ -249,7 +249,7 @@ body{
 	
 	
 	text-align: center;
-	width: 100%;
+	width: 80%;
 	
 }
 

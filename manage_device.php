@@ -51,10 +51,10 @@ if (isset($_POST['delete']) && isset($_POST['device_id']))
 	<li>
 		ID:   <?php echo $row[0]; ?><br>
 		Name:    <?php echo $row[1]; ?><br>
-		Manufacturer: <?php echo $row[3]; ?><br>
-		Compatibility:     <?php echo $row[5]; ?><br>
-		Price  $     <?php echo $row[6]; ?><br>
-		Description: <?php echo $row[7]; ?><br><br>
+		Manufacturer: <?php echo $row[2]; ?><br>
+		Compatibility:     <?php echo $row[4]; ?><br>
+		Price  $     <?php echo $row[5]; ?><br>
+		Description: <?php echo $row[6]; ?><br><br>
 	</li>				
 	<form action="manage_device.php" method="post">
 		<input type="hidden" name="device_name" value="<?php echo $row[1]; ?>">

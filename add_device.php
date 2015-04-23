@@ -25,17 +25,25 @@
 	mysqli_select_db($db_server, $db_database) or die("Unable to select database: " . mysqli_error());
 
 
-	if(isset($_POST['devicename']) && isset($_POST['disability_id']) && isset($_POST['manufacturer']) && isset($_POST['seller_id']) && isset($_POST['compatibility']) && isset($_POST['price']) && isset($_POST['text']) && isset($_POST['peri_device_id']))
+	if(isset($_POST['device_name']) && isset($_POST['manufacturer']) && isset($_POST['compatibility']) && isset($_POST['price']) && isset($_POST['description']) && isset($_POST['peri_device_id']))
 	{
-		$name = $_POST['devicename'];
-		$disability_id = $_POST['disability_id'];
+		$name = $_POST['device_name'];
+		//$disability_id = $_POST['disability_id'];
 		$manufacturer = $_POST['manufacturer'];
-		$seller_id = $_POST['seller_id'];
+		//$seller_id = $_POST['seller_id'];
 		$compatibility = $_POST['compatibility'];
 		$price = $_POST['price'];
-		$description = $_POST['text'];
+		$description = $_POST['description'];
 		$peri_device_id = $_POST['peri_device_id'];
 
+		$android = $_POST['android'];
+		$apple = $_POST['apple'];
+		$specialized = $_POST['specialized'];
+		$entertainment = $_POST['entertainment'];
+		$communication = $_POST['communication'];
+		$everyday_tasks = $_POST['everyday_tasks'];
+		$scheduling = $_POST['scheduling'];
+		
 		$query = "INSERT INTO device VALUES" . "('". mysqli_insert_id($db_server)."', '$name', '$disability_id', '$manufacturer', '$seller_id', '$compatibility', '$price', '$description', '$peri_device_id')";
 		
 		if (!mysqli_query($db_server, $query)){
@@ -59,18 +67,10 @@
 			<table align="center">
 			<tr>
 			<td  class="first">
-				<label for="devicename">Device Name:</label>
+				<label for="device_name">Device Name:</label>
 			</td>
 			<td class="second">
-				<input type="text" name="devicename" maxlength="70" />
-			</td>
-			</tr>
-			<tr>
-			<td  class="first">
-				<label for="disability_id">Disability ID:</label>
-			</td>
-			<td class="second">
-				<input type="text" name="disability_id" size="5" />
+				<input type="text" name="device_name" maxlength="70" />
 			</td>
 			</tr>
 			<tr>
@@ -81,14 +81,17 @@
 				<input type="text" name="manufacturer" size="15" maxlength="70" />
 			</td>
 			</tr>
+			
 			<tr>
-			<td  class="first">
-				<label for="devicename">Seller ID:</label>
+			<td class="first">
+				<label for="compatibility">Compatibility:</label>
 			</td>
 			<td class="second">
-				<input type="text" name="seller_id" value="" size="5" />
+				<input type="text" name="compatibility" value="" maxlength="10" />
 			</td>
 			</tr>
+			
+			
 			<tr>
 			<td class="first">
 				<label for="price">Price:</label>
@@ -98,20 +101,10 @@
 			</td>
 			</tr>
 			<br/>
-			<tr>
-				<td class="first">
-					<label for="Compatibility">Compatibility:</label>
-				</td>
-				<td class="second" >
-					<label for="compatibility">Yes</label>
-						<input type="radio" name="compatibility" value="1"  />
-						 <label for="compatibility">No</label>
-						<input type="radio" name="compatibility" value="0" />
-				</td>
-			</tr>
+			
 			<tr>
 			<td  class="first">
-				<label for="devicename">Peri Device ID:</label>
+				<label for="peri_device_id">Periph Device ID:</label>
 			</td>
 			<td class="second">
 				<input type="text" name="peri_device_id" size="5" />
@@ -120,13 +113,78 @@
 			
 			<tr>
 				<td class="first">
-					<label for="text"> Device Description:</label>
+					<label for="description">Device Description:</label>
 				</td>
 				<td class="second">
 					<textarea name="text" rows="3" cols="50">
 					</textarea>
 				</td>
 			</tr>
+			<tr>
+			<td class="first">
+				<label for="android">Android?:</label>
+			</td>
+			<td class="second">
+				<input type="text" name="android" value="" maxlength="10" />
+			</td>
+			</tr>
+			
+			
+			<tr>
+			<td class="first">
+				<label for="apple">Apple?:</label>
+			</td>
+			<td class="second">
+				<input type="text" name="apple" value="" maxlength="10" />
+			</td>
+			</tr>
+			
+			
+			<tr>
+			<td class="first">
+				<label for="specialized">Specialized?:</label>
+			</td>
+			<td class="second">
+				<input type="text" name="specialized" value="" maxlength="10" />
+			</td>
+			</tr>
+			
+			<tr>
+			<td class="first">
+				<label for="entertainment">Entertainment?:</label>
+			</td>
+			<td class="second">
+				<input type="text" name="entertainment" value="" maxlength="10" />
+			</td>
+			</tr>
+			
+			<tr>
+			<td class="first">
+				<label for="communication">Communication?:</label>
+			</td>
+			<td class="second">
+				<input type="text" name="communication" value="" maxlength="10" />
+			</td>
+			</tr>
+			
+			<tr>
+			<td class="first">
+				<label for="everyday_tasks">Everyday Task?:</label>
+			</td>
+			<td class="second">
+				<input type="text" name="everyday_tasks" value="" maxlength="10" />
+			</td>
+			</tr>
+			
+			<tr>
+			<td class="first">
+				<label for="scheduling">Scheduling?:</label>
+			</td>
+			<td class="second">
+				<input type="text" name="scheduling" value="" maxlength="10" />
+			</td>
+			</tr>
+			
 			<tr>
 				<td>			
 				</td>

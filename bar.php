@@ -1,5 +1,5 @@
 <h1>Administrator</h1>
-<img src="photo.jpg" width="70" height="70">
+<img src="photo.jpg" width="160" height="70">
 
 <h2>Manage Device</h2>
 <ul type="circle" id="list">
