@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 23, 2015 at 03:33 AM
+-- Generation Time: Apr 30, 2015 at 09:49 AM
 -- Server version: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -42,6 +42,7 @@ CREATE TABLE IF NOT EXISTS `device` (
   `communication` tinyint(4) NOT NULL,
   `everyday_tasks` tinyint(4) NOT NULL,
   `scheduling` tinyint(4) NOT NULL,
+  `product_iimage` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`device_id`),
   KEY `seller_id` (`seller_id`),
   KEY `peri_device_id` (`peri_device_id`)
@@ -51,29 +52,29 @@ CREATE TABLE IF NOT EXISTS `device` (
 -- Dumping data for table `device`
 --
 
-INSERT INTO `device` (`device_id`, `device_name`, `manufacturer`, `seller_id`, `compatibility`, `price`, `description`, `peri_device_id`, `android`, `apple`, `specialized`, `entertainment`, `communication`, `everyday_tasks`, `scheduling`) VALUES
-(1, 'IPhone 6', 'Apple', 0, 1, 299, 'Small in size with three screens size options.  Multiple memory sizes available as the price increases.  Numerous application compatibility through the ITunes network.', 0, 0, 1, 0, 1, 1, 1, 1),
-(2, 'IPad Air 2', 'Apple', 0, 1, 499, 'Large touch screen tablet, communication abilities, price increases with memory size increase, Numerous application compatibility through the ITunes network.', 0, 0, 1, 0, 1, 1, 1, 1),
-(3, 'IPad Air', 'Apple', 0, 1, 399, 'Large touch screen tablet, price increases as the memory increases. Numerous application compatibility through the ITunes network.', 0, 0, 1, 0, 1, 1, 1, 1),
-(4, 'IPad Mini', 'Apple', 0, 1, 249, 'Smaller version of the IPad Air but larger touch screen tablet than an IPhone. Price increases as the memory increases. Numerous application compatibility through the ITunes network.', 0, 0, 1, 0, 1, 1, 1, 1),
-(5, 'IPad Mini 2', 'Apple', 0, 1, 299, 'Smaller version of the IPad Air but larger touch screen tablet than an IPhone. Price increases as the memory increases. Numerous application compatibility through the ITunes network.', 0, 0, 1, 0, 1, 1, 1, 1),
-(6, 'IPad Mini 3', 'Apple', 0, 1, 399, 'Smaller version of the IPad Air but larger touch screen tablet than an IPhone. Price increases as the memory increases. Numerous application compatibility through the ITunes network.', 0, 0, 1, 0, 1, 1, 1, 1),
-(7, 'Pronto Tech 7"', 'Android', 0, 2, 49, '4 GB of memory, this device is compatible with all Android apps.  It has a double camera with a large 7" tablet touch screen and WiFi is available for this device.', 0, 1, 0, 0, 1, 1, 1, 1),
-(8, 'Megafeis Tablet', 'Android', 0, 2, 79, '8 GB of memory, this device is compatible with all Android Applications.  It has the addition of a microphone for speaking to text messages, as well as has a large tablet touch screen.', 0, 1, 0, 0, 1, 1, 1, 1),
-(9, 'Digital Reins 9"', 'Android', 0, 2, 179, 'A larger, 9" tablet touch screen, compatible with all Android Applications.  Has 8 GB of memory as well as a microphone for speaking to text messages', 0, 1, 0, 0, 1, 1, 1, 1),
-(10, 'iRulu 7"', 'Android', 0, 2, 59, 'Android Applications compatibility with a 7" tablet touch screen.  Blue Tooth and Skype built in along with 4 GB of memory and has a built in MP3 player.', 0, 1, 0, 0, 1, 1, 1, 1),
-(11, 'Sky Devices Ski', 'Android', 0, 2, 79, 'This is an Android phone with a larger touch screen,  it has 4 GB of ROM with an excellent microphone for speaking to text messages.', 0, 1, 0, 0, 1, 1, 1, 1),
-(12, 'Allora Keyboard', 'Spectronics', 0, 3, 2495, 'Allora offers this keyboard for simple text to speech generating.  It comes with a waterproof keyboard and word prediction.', 0, 0, 0, 1, 0, 1, 0, 0),
-(13, 'Xpress', 'Dynavox', 0, 4, 6514, 'Dynavox offers this systems which has Windows-based software as well as offers the user the ability to create sentences and conversations using pictures.', 0, 0, 0, 1, 0, 1, 1, 1),
-(14, 'Maestro', 'Dynavox', 0, 5, 12049, 'The Maestro allows the user to create custom pages and allows speaking to text messages.  The device contains a camera, preloaded voices, is Microsoft compatible and has an eye-tracking accessory.', 0, 0, 0, 1, 0, 1, 1, 1),
-(15, 'Dynawrite', 'Dynavox', 0, 6, 4995, 'Dynawrite is a small compact device that can record up to an hour of speaking and contains a computer keyboard for easy, familiar use.', 0, 0, 0, 1, 0, 1, 0, 0),
-(16, 'V+', 'Dynavox', 0, 7, 6548, 'Windows-based device that has Integrated reader software and comes with Eye-tracking software.', 0, 0, 0, 1, 1, 1, 0, 1),
-(17, 'Lightwriter', 'Toby Churchill', 0, 8, 6250, 'The Lightwriter receives texts, stores notes and can be used as a remote in the household.  This device has a large text display but does not speak.', 0, 0, 0, 1, 0, 1, 0, 0),
-(18, 'SL40 and Connect', 'Toby Churchill', 0, 9, 3500, 'This is a larger version of the Lightwriter that has text and mobile phone abilities.  It can save large Microsoft document and has various voices available for text to speech.', 0, 0, 0, 1, 0, 1, 1, 1),
-(19, 'ECO2', 'Prentke Romich', 0, 10, 7895, 'The ECO2 is a windows-based device with a large 14.1" screen and supports MP3 player files.  It has large keys, eye-tracking software and a built-in CD burner. ', 0, 0, 0, 1, 1, 1, 1, 1),
-(20, 'NOVA Chat 5', 'Saltillo', 0, 11, 3195, 'This device has an Android platform and is the smallest of the NOVA series.  It comes with switch scanning and preloaded vocabulary.', 0, 0, 0, 1, 0, 1, 1, 1),
-(21, 'NOVA Chat 8', 'Saltillo', 0, 12, 3970, 'This device begins with an Android platform it has many different vocabulary pages preloaded.', 0, 0, 0, 1, 0, 1, 1, 1),
-(22, 'NOVA Chat 10', 'Saltillo', 0, 12, 4395, 'This device also has an Android platform as well as a speech synthesizer.  The NOVA Chat 10 allows the user to save files and has numerous voice options for the speaking feature.', 0, 0, 0, 1, 0, 1, 1, 1);
+INSERT INTO `device` (`device_id`, `device_name`, `manufacturer`, `seller_id`, `compatibility`, `price`, `description`, `peri_device_id`, `android`, `apple`, `specialized`, `entertainment`, `communication`, `everyday_tasks`, `scheduling`, `product_iimage`) VALUES
+(1, 'IPhone 6', 'Apple', 0, 1, 299, 'Small in size with three screens size options.  Multiple memory sizes available as the price increases.  Numerous application compatibility through the ITunes network.', 0, 0, 1, 0, 1, 1, 1, 1, 'product_pictures\\iphone6.jpg'),
+(2, 'IPad Air 2', 'Apple', 0, 1, 499, 'Large touch screen tablet, communication abilities, price increases with memory size increase, Numerous application compatibility through the ITunes network.', 0, 0, 1, 0, 1, 1, 1, 1, 'product_pictures\\ipadair2.png'),
+(3, 'IPad Air', 'Apple', 0, 1, 399, 'Large touch screen tablet, price increases as the memory increases. Numerous application compatibility through the ITunes network.', 0, 0, 1, 0, 1, 1, 1, 1, 'product_pictures\\ipadair.jpg'),
+(4, 'IPad Mini', 'Apple', 0, 1, 249, 'Smaller version of the IPad Air but larger touch screen tablet than an IPhone. Price increases as the memory increases. Numerous application compatibility through the ITunes network.', 0, 0, 1, 0, 1, 1, 1, 1, 'product_pictures\\ipadmini.jpg'),
+(5, 'IPad Mini 2', 'Apple', 0, 1, 299, 'Smaller version of the IPad Air but larger touch screen tablet than an IPhone. Price increases as the memory increases. Numerous application compatibility through the ITunes network.', 0, 0, 1, 0, 1, 1, 1, 1, 'product_pictures\\ipadmini2.jpg'),
+(6, 'IPad Mini 3', 'Apple', 0, 1, 399, 'Smaller version of the IPad Air but larger touch screen tablet than an IPhone. Price increases as the memory increases. Numerous application compatibility through the ITunes network.', 0, 0, 1, 0, 1, 1, 1, 1, 'product_pictures\\ipadmini3.jpg'),
+(7, 'Pronto Tech 7"', 'Android', 0, 2, 49, '4 GB of memory, this device is compatible with all Android apps.  It has a double camera with a large 7" tablet touch screen and WiFi is available for this device.', 0, 1, 0, 0, 1, 1, 1, 1, 'product_pictures\\prontotec.jpeg'),
+(8, 'Megafeis Tablet', 'Android', 0, 2, 79, '8 GB of memory, this device is compatible with all Android Applications.  It has the addition of a microphone for speaking to text messages, as well as has a large tablet touch screen.', 0, 1, 0, 0, 1, 1, 1, 1, 'product_pictures\\Megafeis.jpg'),
+(9, 'Digital Reins 9"', 'Android', 0, 2, 179, 'A larger, 9" tablet touch screen, compatible with all Android Applications.  Has 8 GB of memory as well as a microphone for speaking to text messages', 0, 1, 0, 0, 1, 1, 1, 1, 'product_pictures\\digitalReins.jpg'),
+(10, 'iRulu 7"', 'Android', 0, 2, 59, 'Android Applications compatibility with a 7" tablet touch screen.  Blue Tooth and Skype built in along with 4 GB of memory and has a built in MP3 player.', 0, 1, 0, 0, 1, 1, 1, 1, 'product_pictures\\irulu.jpg'),
+(11, 'Sky Devices Ski', 'Android', 0, 2, 79, 'This is an Android phone with a larger touch screen,  it has 4 GB of ROM with an excellent microphone for speaking to text messages.', 0, 1, 0, 0, 1, 1, 1, 1, 'product_pictures\\sky device.jpg'),
+(12, 'Allora Keyboard', 'Spectronics', 0, 3, 2495, 'Allora offers this keyboard for simple text to speech generating.  It comes with a waterproof keyboard and word prediction.', 0, 0, 0, 1, 0, 1, 0, 0, 'product_pictures\\allora.jpg'),
+(13, 'Xpress', 'Dynavox', 0, 4, 6514, 'Dynavox offers this systems which has Windows-based software as well as offers the user the ability to create sentences and conversations using pictures.', 0, 0, 0, 1, 0, 1, 1, 1, 'product_pictures\\xpress.jpg'),
+(14, 'Maestro', 'Dynavox', 0, 5, 12049, 'The Maestro allows the user to create custom pages and allows speaking to text messages.  The device contains a camera, preloaded voices, is Microsoft compatible and has an eye-tracking accessory.', 0, 0, 0, 1, 0, 1, 1, 1, 'product_pictures\\maestro.jpg'),
+(15, 'Dynawrite', 'Dynavox', 0, 6, 4995, 'Dynawrite is a small compact device that can record up to an hour of speaking and contains a computer keyboard for easy, familiar use.', 0, 0, 0, 1, 0, 1, 0, 0, 'product_pictures\\Dynawrite.jpg'),
+(16, 'V+', 'Dynavox', 0, 7, 6548, 'Windows-based device that has Integrated reader software and comes with Eye-tracking software.', 0, 0, 0, 1, 1, 1, 0, 1, 'product_pictures\\v+.jpg'),
+(17, 'Lightwriter', 'Toby Churchill', 0, 8, 6250, 'The Lightwriter receives texts, stores notes and can be used as a remote in the household.  This device has a large text display but does not speak.', 0, 0, 0, 1, 0, 1, 0, 0, 'product_pictures\\lightwriter.jpg'),
+(18, 'SL40 and Connect', 'Toby Churchill', 0, 9, 3500, 'This is a larger version of the Lightwriter that has text and mobile phone abilities.  It can save large Microsoft document and has various voices available for text to speech.', 0, 0, 0, 1, 0, 1, 1, 1, 'product_pictures\\Connect.jpg'),
+(19, 'ECO2', 'Prentke Romich', 0, 10, 7895, 'The ECO2 is a windows-based device with a large 14.1" screen and supports MP3 player files.  It has large keys, eye-tracking software and a built-in CD burner. ', 0, 0, 0, 1, 1, 1, 1, 1, 'product_pictures\\ECO2.jpg'),
+(20, 'NOVA Chat 5', 'Saltillo', 0, 11, 3195, 'This device has an Android platform and is the smallest of the NOVA series.  It comes with switch scanning and preloaded vocabulary.', 0, 0, 0, 1, 0, 1, 1, 1, 'product_pictures\\nova chat 5.jpg'),
+(21, 'NOVA Chat 8', 'Saltillo', 0, 12, 3970, 'This device begins with an Android platform it has many different vocabulary pages preloaded.', 0, 0, 0, 1, 0, 1, 1, 1, 'product_pictures\\nova8.jpg'),
+(22, 'NOVA Chat 10', 'Saltillo', 0, 12, 4395, 'This device also has an Android platform as well as a speech synthesizer.  The NOVA Chat 10 allows the user to save files and has numerous voice options for the speaking feature.', 0, 0, 0, 1, 0, 1, 1, 1, 'product_pictures\\nova chat 10.jpg');
 
 -- --------------------------------------------------------
 

@@ -211,7 +211,7 @@ File to view products
 
 error_reporting(E_ALL ^ E_NOTICE);
 // Create connection
-$conn= mysqli_connect("","root","930517jzg","matchmaker");
+$conn= mysqli_connect("","root","password","matchmaker");
 
 // Check connection
 if (mysqli_connect_errno()) {
@@ -318,16 +318,23 @@ else if(isset($_GET['view_id'])) {
 		
 		
 		if ($result->num_rows > 0) {
-				echo "<table align='center';><tr><th>Device Name</th><th>Description</th><th>Manufacturer</th></tr>";
+				echo "<table align='center';><tr><th>Device Name</th><th>Description</th><th>Manufacturer</th><th>Image</th></tr>";
 		// output data of each row
 				while($row = $result ->fetch_assoc()) {
 				
 					$compatID = $row["compatibility"];
 					
 					
+					echo "<tr>";
 					
-					echo "<tr><td><a href='./results.php?compatID=$compatID'>". $row["device_name"]. "</a></td><td>".$row["description"]."</td><td>".$row["manufacturer"]."</td></tr>";
+					echo"<td><a href='./results.php?compatID=$compatID'>". $row["device_name"]. "</a></td>";
+					echo"<td>"; echo $row["description"]."</td>";
+					echo"<td>"; echo $row["manufacturer"]."</td>";
 					
+					echo "<td>"; ?> <img src="<?php echo $row["product_iimage"]; ?>" height="200" width="300"> <?php echo " </td>";
+					
+					echo "</tr>";
+						
 				}
 				echo "</table>";
 				
@@ -442,15 +449,22 @@ else{
 		}
 			
 			if ($result->num_rows > 0) {
-				echo "<table align='center';><tr><th>Device Name</th><th>Description</th><th>Manufacturer</th></tr>";
+				echo "<table align='center';><tr><th>Device Name</th><th>Description</th><th>Manufacturer</th><th>Image</th></tr>";
 		// output data of each row
 				while($row = $result ->fetch_assoc()) {
 					$id = $row["device_id"];
 					
 					
+				echo "<tr>";
 					
+					echo"<td><a href='./results.php?view_id=$id'>". $row["device_name"]. "</a></td>";
+					echo"<td>"; echo $row["description"]."</td>";
+					echo"<td>"; echo $row["manufacturer"]."</td>";
 					
-					echo "<tr><td><a href='./results.php?view_id=$id'>". $row["device_name"]. "</a></td><td>".$row["description"]."</td><td>".$row["manufacturer"]."</td></tr>";
+					echo "<td>"; ?> <img src="<?php echo $row["product_iimage"]; ?>" height="200" width="300"> <?php echo " </td>";
+					
+					echo "</tr>";	
+					
 				}
 				echo "</table>";
 			} 
@@ -496,15 +510,23 @@ else{
 			
 		}	
 			if ($result->num_rows > 0) {
-				echo "<table align='center';><tr><th>Device Name</th><th>Description</th><th>Manufacturer</th></tr>";
+				echo "<table align='center';><tr><th>Device Name</th><th>Description</th><th>Manufacturer</th><th>Image</th></tr>";
 		// output data of each row
+		
+		
 				while($row = $result ->fetch_assoc()) {
 					$id = $row["device_id"];
 					
 					
+					echo "<tr>";
 					
+					echo"<td><a href='./results.php?view_id=$id'>". $row["device_name"]. "</a></td>";
+					echo"<td>"; echo $row["description"]."</td>";
+					echo"<td>"; echo $row["manufacturer"]."</td>";
 					
-					echo "<tr><td><a href='./results.php?view_id=$id'>". $row["device_name"]. "</a></td><td>".$row["description"]."</td><td>".$row["manufacturer"]."</td></tr>";
+					echo "<td>"; ?> <img src="<?php echo $row["product_iimage"]; ?>" height="200" width="300"> <?php echo " </td>";
+					
+					echo "</tr>";
 				}
 				echo "</table>";
 			} 
@@ -551,15 +573,22 @@ else{
 		}	
 			
 			if ($result->num_rows > 0) {
-				echo "<table align='center';><tr><th>Device Name</th><th>Description</th><th>Manufacturer</th></tr>";
+				echo "<table align='center';><tr><th>Device Name</th><th>Description</th><th>Manufacturer</th><th>Image</th></tr>";
 		// output data of each row
 				while($row = $result ->fetch_assoc()) {
 					$id = $row["device_id"];
 					
 					
+				echo "<tr>";
 					
+					echo"<td><a href='./results.php?view_id=$id'>". $row["device_name"]. "</a></td>";
+					echo"<td>"; echo $row["description"]."</td>";
+					echo"<td>"; echo $row["manufacturer"]."</td>";
 					
-					echo "<tr><td><a href='./results.php?view_id=$id'>". $row["device_name"]. "</a></td><td>".$row["description"]."</td><td>".$row["manufacturer"]."</td></tr>";
+					echo "<td>"; ?> <img src="<?php echo $row["product_iimage"]; ?>" height="200" width="300"> <?php echo " </td>";
+					
+					echo "</tr>";	
+					
 				}
 				echo "</table>";
 			} 
@@ -606,7 +635,7 @@ else{
 		}		
 			
 			if ($result->num_rows > 0) {
-				echo "<table align='center';><tr><th>Device Name</th><th>Description</th><th>Manufacturer</th></tr>";
+				echo "<table align='center';><tr><th>Device Name</th><th>Description</th><th>Manufacturer</th><th>Image</th></tr>";
 		// output data of each row
 				while($row = $result ->fetch_assoc()) {
 					$id = $row["device_id"];
@@ -614,7 +643,15 @@ else{
 					
 					
 					
-					echo "<tr><td><a href='./results.php?view_id=$id'>". $row["device_name"]. "</a></td><td>".$row["description"]."</td><td>".$row["manufacturer"]."</td></tr>";
+					echo "<tr>";
+					
+					echo"<td><a href='./results.php?view_id=$id'>". $row["device_name"]. "</a></td>";
+					echo"<td>"; echo $row["description"]."</td>";
+					echo"<td>"; echo $row["manufacturer"]."</td>";
+					
+					echo "<td>"; ?> <img src="<?php echo $row["product_iimage"]; ?>" height="200" width="300"> <?php echo " </td>";
+					
+					echo "</tr>";
 				}
 				echo "</table>";
 			} 
@@ -661,16 +698,23 @@ else{
 		}		
 			
 			if ($result->num_rows > 0) {
-				echo "<table align='center';><tr><th>Device Name</th><th>Description</th><th>Manufacturer</th></tr>";
+				echo "<table align='center';><tr><th>Device Name</th><th>Description</th><th>Manufacturer</th><th>Image</th></tr>";
 		// output data of each row
 				while($row = $result ->fetch_assoc()) {
 					$id = $row["device_id"];
 					
+					echo "<tr>";
+					
+					echo"<td><a href='./results.php?view_id=$id'>". $row["device_name"]. "</a></td>";
+					echo"<td>"; echo $row["description"]."</td>";
+					echo"<td>"; echo $row["manufacturer"]."</td>";
+					
+					echo "<td>"; ?> <img src="<?php echo $row["product_iimage"]; ?>" height="200" width="300"> <?php echo " </td>";
+					
+					echo "</tr>";
 					
 					
-					
-					echo "<tr><td><a href='./results.php?view_id=$id'>". $row["device_name"]. "</a></td><td>".$row["description"]."</td><td>".$row["manufacturer"]."</td></tr>";
-				}
+					}
 				echo "</table>";
 			} 
 			else {
