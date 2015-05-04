@@ -1,6 +1,3 @@
-
-
-
 <div id="manage_device">
 
 <div>
@@ -49,12 +46,23 @@ if (isset($_POST['delete']) && isset($_POST['device_id']))
 		$row = mysqli_fetch_row($result);
 ?>
 	<li>
-		ID:   <?php echo $row[0]; ?><br>
-		Name:    <?php echo $row[1]; ?><br>
-		Manufacturer: <?php echo $row[2]; ?><br>
-		Compatibility:     <?php echo $row[4]; ?><br>
-		Price  $     <?php echo $row[5]; ?><br>
-		Description: <?php echo $row[6]; ?><br><br>
+		ID:   <?php echo "<b>".$row[0]."</b>"; ?><br>
+		Name:    <?php echo "<b>".$row[1]."</b>"; ?><br>
+		Manufacturer: <?php echo "<b>".$row[2]."</b>"; ?><br>
+		Seller ID:     <?php echo "<b>".$row[3]."</b>"; ?><br>
+		Compatibility:     <?php echo "<b>".$row[4]."</b>"; ?><br>
+		Price:  $<?php echo "<b>".$row[5]."</b>"; ?><br>
+		Description: <?php echo "<b>".$row[6]."</b>"; ?><br>
+		Peripheral ID:     <?php echo "<b>".$row[7]."</b>"; ?><br>
+		Android:     <?php echo "<b>".$row[8]."</b>"; ?><br>
+		Apple:     <?php echo "<b>".$row[9]."</b>"; ?><br>
+		Specialized:     <?php echo "<b>".$row[10]."</b>"; ?><br>
+		Entertainment:     <?php echo "<b>".$row[11]."</b>"; ?><br>
+		Communication:     <?php echo "<b>".$row[12]."</b>"; ?><br>
+		Everyday tasks:     <?php echo "<b>".$row[13]."</b>"; ?><br>
+		Scheduling:     <?php echo "<b>".$row[14]."</b>"; ?><br>
+		Product Image:     <?php echo "<b>".$row[15]."</b>"; ?><br><br>
+
 	</li>				
 	<form action="manage_device.php" method="post">
 		<input type="hidden" name="device_name" value="<?php echo $row[1]; ?>">

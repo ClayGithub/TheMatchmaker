@@ -1,7 +1,7 @@
 <div id="manage_device">
 
 <div>
-	<h1>Manage Peripheral Device</h1>
+	<h1 id="head17">Manage Peripheral Device</h1>
 <?php
  
 include_once('header.php');
@@ -49,12 +49,20 @@ if (isset($_POST['delete']) && isset($_POST['device_id']))
 		$row = mysqli_fetch_row($result);
 ?>
 	<li>
-		ID:   <?php echo $row[0]; ?><br>
-		Name:    <?php echo $row[2]; ?><br>
-		Manufacturer: <?php echo $row[3]; ?><br>
-		Compatibility:     <?php echo $row[1]; ?><br>
-		Price  $     <?php echo $row[4]; ?><br>
-		Device ID: <?php echo $row[5]; ?><br><br>
+		ID:   <?php echo "<b>".$row[0]."</b>"; ?><br>
+		Name:    <?php echo "<b>".$row[2]."</b>"; ?><br>
+		Compatibility:     <?php echo "<b>".$row[1]."</b>"; ?><br>
+		Price:  $<?php echo "<b>".$row[3]."</b>"; ?><br>
+		Device ID: <?php echo "<b>".$row[4]."</b>"; ?><br>
+		Entertainment:    <?php echo "<b>".$row[5]."</b>"; ?><br>
+		Communication:    <?php echo "<b>".$row[6]."</b>"; ?><br>
+		Scheduling:    <?php echo "<b>".$row[7]."</b>"; ?><br>
+		Everyday tasks:    <?php echo "<b>".$row[8]."</b>"; ?><br>
+		Website:    <?php echo "<b>".$row[9]."</b>"; ?><br>
+		Description:    <?php echo "<b>".$row[10]."</b>"; ?><br>
+
+
+		<br>
 	</li>
 
 	<form action="manage_peripheral.php" method="post">

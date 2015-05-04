@@ -12,8 +12,7 @@
 
 </head>
 <body class="body">
-	<div id="table">
-	<h2 id="head1">Add Peripheral Device</h2>
+	
 	<?php 
 
 	require_once 'config.php';
@@ -24,15 +23,22 @@
 	mysqli_select_db($db_server, $db_database) or die("Unable to select database: " . mysqli_error($db_server));
 
 
-	if(isset($_POST['devicename']) && isset($_POST['manufacturer']) &&  isset($_POST['compatibility']) && isset($_POST['price']) && isset($_POST['device_id']))
+	if(isset($_POST['devicename']) && isset($_POST['manufacturer']) &&  isset($_POST['compatibility']) && isset($_POST['price']) && isset($_POST['device_id']) && isset($_POST['text']) && isset($_POST['website']) && isset($_POST['entertainment']) && isset($_POST['communication']) && isset($_POST['everyday_tasks']) && isset($_POST['scheduling']))
 	{
 		$name = $_POST['devicename'];
 		$manufacturer = $_POST['manufacturer'];
 		$compatibility = $_POST['compatibility'];
 		$price = $_POST['price'];
 		$device_id = $_POST['device_id'];
+		$description = $_POST['text'];
+		$website = $_POST['website'];
+		$entertainment = $_POST['entertainment'];
+		$communication = $_POST['communication'];
+		$everyday_tasks = $_POST['everyday_tasks'];
+		$scheduling = $_POST['scheduling'];
 
-		$query = "INSERT INTO peripheral_device VALUES" . "('". mysqli_insert_id($db_server)."','$compatibility', '$name', '$manufacturer', '$price', '$device_id')";
+
+		$query = "INSERT INTO peripheral_device VALUES" . "('". mysqli_insert_id($db_server)."','$compatibility', '$peri_device_name', '$price', '$device_id', '$entertainment', '$communication', '$scheduling', '$everyday_tasks', '$website', '$description')";
 		
 		if (!mysqli_query($db_server, $query)){
 		
@@ -44,17 +50,18 @@
 		}
 
 	}else{
+
 		echo "Fill in the blank form first and then submit again.";
 	}
 ?>
 	<br>
-	
+	<h2 id="head1">Add Peripheral Device</h2>
 
 	<table style="width:70%" id="ptable">
 	<tr>
 	<td>
 	<form action="add_peripheral.php" method="post">
-		<table>
+		<table align="center">
 		<tr>
 		<td  class="first">
 			<label for="devicename">Device Name:</label>
@@ -70,6 +77,7 @@
 		<td class="second">
 			<input type="text" name="manufacturer" size="15" maxlength="70" />
 		</td>
+		</tr>
 		<tr>
 		<td class="first">
 			<label for="price">Price:</label>
@@ -97,7 +105,68 @@
 					 <label for="compatibility">No</label>
 					<input type="radio" name="compatibility" value="0">
 			</td>
-		</tr>		
+		</tr>	
+		<tr>
+			<td class="first">
+				<label for="text"> Device Description:</label>
+			</td>
+			<td class="second">
+				<textarea name="text" rows="3" cols="50">
+				</textarea>
+			</td>
+		</tr>
+				<tr>
+		<td class="first">
+			<label for="website">Website:</label>
+		</td>
+		<td class="second">
+			<input type="text" name="website" size="30" maxlength="70" />
+		</td>
+		</tr>
+		<tr>
+			<td  class="first">
+				<label for="entertainment">Entertainment:</label>
+			</td>
+			<td class="second" >
+					<label for="entertainment">Yes</label>
+						<input type="radio" name="entertainment" value="1"  />
+						 <label for="entertainment">No</label>
+						<input type="radio" name="entertainment" value="0" />
+				</td>
+			</tr>
+			<tr>
+			<td  class="first">
+				<label for="communication">Communication:</label>
+			</td>
+			<td class="second" >
+					<label for="communication">Yes</label>
+						<input type="radio" name="communication" value="1"  />
+						 <label for="communication">No</label>
+						<input type="radio" name="communication" value="0" />
+				</td>
+			</tr>
+			<tr>
+			<td  class="first">
+				<label for="everydaytask">Everyday Tasks:</label>
+			</td>
+			<td class="second" >
+					<label for="everyday_tasks">Yes</label>
+						<input type="radio" name="everyday_tasks" value="1"  />
+						 <label for="everyday_tasks">No</label>
+						<input type="radio" name="everyday_tasks" value="0" />
+				</td>
+			</tr>
+			<tr>
+			<td  class="first">
+				<label for="schedule">Scheduling:</label>
+			</td>
+			<td class="second" >
+					<label for="scheduling">Yes</label>
+						<input type="radio" name="scheduling" value="1"  />
+						 <label for="scheduling">No</label>
+						<input type="radio" name="scheduling" value="0" />
+				</td>
+			</tr>	
 		<tr>
 			<td>
 			</td>
@@ -111,7 +180,7 @@
 	</td>
 	</tr>
 	</table>
-	</div>
+	
 	<?php
 		include_once('footer.php');
 	?>
